@@ -1,0 +1,15 @@
+SetEnvIf Request_URI ".*" SITE_ROOT=/b2b/internal/endpoint/sf/v1.0/
+SetEnvIf Request_URI ".*" DAPP_ROOT=/esc_scripts/dapp-b2b/v2.0
+SetEnvIf Request_URI ".*" DAPP_FLOW=flow-endpoint-01
+
+RewriteEngine On
+RewriteBase /
+
+#https
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ %{ENV:SITE_ROOT}$1.php [L,QSA]

@@ -1,0 +1,179 @@
+.page-hero-text
+  background-color: #f2f4f5
+
+.page-hero-text-container
+  height: 350px
+  position: relative
+  +mq(1199)
+    height: 240px
+  +mq(1023)
+    height: 180px
+  +mq(767)
+    height: 140px
+
+  > *
+    position: relative
+    z-index: 2
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    width: 350px
+    height: 350px
+    border-radius: 50%
+    top: 50%
+    left: calc(50% - 600px)
+    margin-top: -175px
+    +mq(1199)
+      margin-top: -150px
+      width: 300px
+      height: 300px
+      left: calc(50% - 430px)
+    +mq(1023)
+      margin-top: -105px
+      width: 210px
+      height: 210px
+      left: calc(50% - 300px)
+    +mq(767)
+      margin-top: -90px
+      width: 180px
+      height: 180px
+      left: calc(50% - 240px)
+    +mq(413)
+      margin-top: -80px
+      width: 160px
+      height: 160px
+      left: calc(50% - 220px)
+  h1
+    color: #757d8d
+    font-size: 7rem
+    line-height: 1.1
+    margin-bottom: 0
+    padding-right: 200px
+    +mq(1199)
+      font-size: 5.5rem
+      padding-right: 0px
+    +mq(1023)
+      font-size: 4rem
+    +mq(767)
+      font-size: 3rem
+    +mq(413)
+      font-size: 2.7rem
+    +mq(374)
+      font-size: 2.5rem
+      
+.phtc-01
+  &::before
+    background: rgb(215,90,83)
+    background: linear-gradient(90deg, rgba(215,90,83,1) 0%, rgba(241,172,122,1) 100%)
+.phtc-02
+  &::before
+    background: rgb(66,120,253)
+    background: linear-gradient(90deg, rgba(66,120,253,1) 0%, rgba(25,227,224,1) 100%)
+.phtc-03
+  &::before
+    background: rgb(19,137,147)
+    background: linear-gradient(90deg, rgba(19,137,147,1) 0%, rgba(91,221,197,1) 100%)
+
+.phtc-04
+  &::before
+    background: rgb(67,194,200)
+    background: linear-gradient(90deg, rgba(67,194,200,1) 0%, rgba(248,226,139,1) 100%)
+
+.list-bullet-xl
+  li
+    padding-left: 80px
+    position: relative
+    +mq(1199)
+      padding-left: 70px
+    +mq(1023)
+      padding-left: 50px
+    +mq(767)
+      padding-left: 45px
+    +mq(374)
+      padding-left: 37px
+    &:not(:last-child)
+      margin-bottom: 60px
+    ::before
+      content: ''
+      display: block
+      position: absolute
+      top: -2px
+      left: 0
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #ccc
+      +mq(1199)
+        width: 45px
+        height: 45px
+      +mq(1023)
+        top: 2px
+        width: 35px
+        height: 35px
+      +mq(767)
+        top: 4px
+        width: 30px
+        height: 30px
+      +mq(575)
+        top: 2px
+      +mq(479)
+        top: 1px
+      +mq(374)
+        top: 0
+        width: 25px
+        height: 25px
+
+.other-devices-xs
+  max-width: 900px
+  margin: 0 auto
+  .other-devices__item:not(:last-child)
+    +mq(575)
+      margin-bottom: 35px
+
+.h2-01
+  +mq(1199)
+    font-size: 38px
+  +mq(1023)
+    font-size: 31px
+  +mq(767)
+    font-size: 27px
+  +mq(639)
+    font-size: 25px
+  +mq(413)
+    font-size: 21px
+  +mq(374)
+    font-size: 19px
+  br
+    +mq(1199)
+      display: none
+    
+
+.other-devices__item-link
+  h4
+    +mq(1023)
+      font-size: 27px
+    +mq(413)
+      font-size: 23px
+
+.section-hero.sh-01
+  &::after
+    display: none
+  .sh-item-img-main::before
+    background-image: url(../img/bg-merchant-analytics.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+

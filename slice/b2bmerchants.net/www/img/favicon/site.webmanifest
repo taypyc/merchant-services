@@ -1,0 +1,24 @@
+{
+    "name": "Merchant Services",
+    "short_name": "Merchant Services",
+    "icons": [
+        {
+            "src": "android-chrome-128x56.svg",
+            "sizes": "128x56",
+            "type": "image/svg"
+        },
+        {
+            "src": "android-chrome-192x84.svg",
+            "sizes": "192x84",
+            "type": "image/svg"
+        },
+        {
+            "src": "android-chrome-384x168.svg",
+            "sizes": "384x168",
+            "type": "image/svg"
+        }
+    ],
+    "theme_color": "#fafafa",
+    "background_color": "#fafafa",
+    "display": "standalone"
+}

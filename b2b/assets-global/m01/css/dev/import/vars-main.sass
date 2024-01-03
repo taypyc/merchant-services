@@ -1,0 +1,19 @@
+$font_open_sans: 'Open Sans', sans-serif
+$font_poppins: 'Poppins', sans-serif
+
+$some_var: 0
+$color_main: #15357A
+$color_secondary: #3AB8FA
+$color_addiitonal: #F6F9FC
+$color_light_green: #CBF5DC
+$color_light_blue: #B9E6FB
+$color_grey: #6D6E71
+$color_white: #FFFFFF
+
+@mixin font_poppins($fw:600)
+  font-family: $font_poppins
+  font-weight: $fw
+
+@mixin mq($width:767)
+  @media screen and (min-width: $width + 'px')
+    @content

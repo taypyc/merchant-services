@@ -1,0 +1,664 @@
+@font-face
+  font-family: 'Roboto'
+  src: url('fonts/Roboto-Bold.woff2') format('woff2'),url('fonts/Roboto-Bold.woff') format('woff')
+  font-weight: 700
+  font-style: normal
+  font-display: auto
+
+@font-face
+  font-family: 'Roboto'
+  src: url('fonts/Roboto-Regular.woff2') format('woff2'), url('fonts/Roboto-Regular.woff') format('woff')
+  font-weight: 400
+  font-style: normal
+  font-display: auto
+
+@font-face
+  font-family: 'Raleway'
+  src: url('fonts/Raleway-SemiBold.woff2') format('woff2'), url('fonts/Raleway-SemiBold.woff') format('woff')
+  font-weight: 600
+  font-style: normal
+  font-display: auto
+
+#header
+  width: 100%
+  min-width: 320px
+  position: relative
+  top: 0
+  left: 0
+  z-index: 99
+
+.header-body
+  height: 85px
+  position: relative
+
+.hb-logo a
+  display: inline-block
+
+.hb-logo
+  img
+    width: 70px
+    height: auto
+
+.logo-brand
+    margin-left: 15px
+    padding-left: 15px
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: 0
+      height: 38px
+      margin-top: -19px
+      width: 1px
+      background-color: #ccc
+      +mq(639)
+        height: 30px
+        margin-top: -15px
+      +mq(575)
+        height: 24px
+        margin-top: -12px
+    img
+      width: 55px
+
+.hb-phone
+  a
+    font-size: 18px
+    position: relative
+    display: inline-block
+    line-height: 1
+    text-decoration: none
+    .icon
+      font-size: 1.1em
+      vertical-align: middle
+
+.hbp-sm
+  display: none
+
+  +mq(575)
+    display: inline
+
+.hbp-lg
+  +mq(575)
+    display: none
+
+.header-btn-nav
+  display: none
+  outline: none !important
+  border: 0
+  background: transparent
+  border-radius: 0
+  box-shadow: none
+  position: relative
+  width: 42px
+  height: 42px
+  border-radius: 8px
+  padding: 0
+  transition: all .2s ease-in-out
+
+  +mq(991)
+    display: block
+    &.header-btn-nav-active
+      background: rgba(0,0,0,0.1)
+
+  span
+    position: absolute
+    display: block
+    width: 60%
+    top: 50%
+    margin-top: -1px
+    left: 20%
+    height: 2px
+    background: #091a3f
+    transition: all .2s ease-in-out
+
+    &:before, &:after
+      display: block
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      background: #091a3f
+      left: 0
+      transition: all .25s ease-in-out
+
+    &:before
+      top: -7px
+
+    &:after
+      bottom: -7px
+
+.header-btn-nav-active.header-btn-nav span
+  background: transparent
+
+.header-btn-nav.header-btn-nav-active span:before
+  transform: translateY(7px) rotate(135deg)
+
+.header-btn-nav.header-btn-nav-active span:after
+  transform: translateY(-7px) rotate(-135deg)
+
+.header-nav-wrap
+  margin-left: 80px
+  position: relative
+  z-index: 3
+  opacity: 1
+  transition: opacity 0.2s linear
+  +mq(1199)
+    margin-left: 45px
+  +mq(991)
+    margin-left: 25px
+    perspective: 200px
+  +mq(575)
+    margin-left: 14px
+  +mq(479)
+    // or opacity and transition here
+  +mq(413)
+    width: 1px
+    transition: opacity 0.2s linear 0.1s
+  +mq(374)
+    width: auto
+    position: absolute
+    margin-left: 0
+    right: 0
+    top: 50%
+    transform: translate(0,-50%)
+  
+  .header-active &
+    overflow: hidden
+    opacity: 0
+    pointer-events: none
+    +mq(479)
+      // or hide here
+    +mq(413)
+      z-index: 1
+      transition: opacity 0.2s linear 0s
+
+.header-nav
+  +mq(991)
+    visibility: hidden
+    opacity: 0
+    position: absolute
+    z-index: 100
+    top: 100%
+    left: 50%
+    transform-origin: top center
+    transform: translate(-50%,11px) rotateX(-5deg)
+    transition: all .25s ease-in,opacity .15s ease-in,transform .15s ease-in-out
+    &.header-nav-active
+      visibility: visible
+      opacity: 1
+      transform: translate(-50%,11px) rotateX(0)
+  +mq(413)
+    left: calc(50% + 19px)
+  +mq(374)
+    left: auto
+    right: 0
+    transform-origin: top right
+    transform: translate(0,9px) rotateX(-5deg)
+    &.header-nav-active
+      transform: translate(0,9px) rotateX(0)
+  &::before
+    content: ''
+    position: absolute
+    display: none
+    bottom: 100%
+    left: 50%
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid #f6f7fc
+    transform: translate(-50%,0)
+    +mq(991)
+      display: block
+    +mq(374)
+      left: auto
+      right: 12px
+      transform: none
+
+.hn-menu
+  margin: 0
+  +mq(991)
+    overflow: hidden
+    width: 200px
+    margin: 0
+    background: #f6f7fc
+    border-radius: 15px
+    transition: box-shadow 0.15s ease-in
+  +mq(479)
+    width: 180px
+    border-radius: 8px
+
+  .header-nav-active &
+    +mq(991)
+      box-shadow: 0px 2px 16px 0 rgba(9, 26, 63, 0.5)
+
+  & > li
+    margin-right: 37px
+    &:last-child
+      margin-right: 0
+      & > a::after
+        +mq(991)
+          display: none
+    +mq(1199)
+      margin-right: 20px
+    +mq(991)
+      margin-right: 0
+      width: 100%
+
+  & > li > a
+    display: inline-block
+    padding: 5px
+    position: relative
+    text-decoration: none !important
+    text-transform: uppercase
+    font-size: 14px
+    line-height: 1
+    color: #091a3f
+    font-weight: 700
+    letter-spacing: .1em
+    transition: color 0.15s ease-in
+    +mq(1199)
+      font-size: 12px
+    &::after
+      content: ''
+      display: block
+      pointer-events: none
+      position: absolute
+      left: 3px
+      right: 3px
+      top: 100%
+      opacity: 0
+      height: 2px
+      background-color: #2B379B
+      transform: translate(0,3px)
+      transition: transform 0.15s ease-in, opacity 0.2s ease-in
+      +mq(991)
+        transform: translate(0,0)
+        transition: none
+        opacity: 1
+        left: 10px
+        right: 10px
+        top: calc(100% - 1px)
+        height: 1px
+        background-color: rgba(9, 26, 63, 0.2)
+
+    &:hover
+      color: #2B379B
+      &::after
+        opacity: 1
+        transform: translate(0,0)
+      +mq(991)
+        color: #091a3f
+    &:active
+      +mq(991)
+        color: #2B379B
+
+    +mq(991)
+      display: block
+      text-align: center
+      padding: 15px
+
+.hb-cart
+  position: relative
+  color: #4a4a4a
+  font-size: 20px
+  line-height: 1
+  text-align: right
+  opacity: 0
+  transition: opacity 0.3s ease-in
+  &.hb-cart-visible
+    opacity: 1
+
+  [class*="hb-cart-0"]
+    display: block
+    &:last-child
+      margin-bottom: 0
+
+  .icon-clover
+    color: #00b143
+
+  sup
+    top: -0.3em
+
+.hbc-highlighted
+  color: #19983a
+  margin-left: 4px
+
+.hbc-old
+  position: relative
+  margin-left: 4px
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 50%
+    left: -2px
+    right: -2px
+    height: 2px
+    background-color: rgba(74, 74, 74, 0.8)
+    +mq(575)
+      height: 1px
+
+.hb-cart-01
+  display: none !important
+  font-size: 21px
+  margin-bottom: 8px
+  &.visible
+    display: block !important
+  +mq(1199)
+    font-size: 20px
+  +mq(991)
+    font-size: 19px
+  +mq(767)
+    font-size: 18px
+  +mq(575)
+    font-size: 15px
+    margin-bottom: 3px
+  .hb-cart-brand
+    margin-right: 1px
+    top: -1px
+    position: relative
+
+  .hbc-highlighted
+    margin-left: 10px
+    +mq(767)
+      margin-left: 5px
+    +mq(575)
+      margin-left: 0
+
+  .hbc-old
+    font-weight: 400
+
+  .hbc-highlighted, .hbc-old
+    +mq(575)
+      display: inline-block
+      margin-top: 4px
+      font-size: 12px
+
+  br
+    display: none
+    +mq(575)
+      display: inline
+
+
+.hb-cart-02
+  font-size: 15px
+  +font_h
+  +mq(991)
+    font-size: 14px
+  +mq(767)
+    font-size: 13px
+  +mq(575)
+    font-family: $font_r
+    font-weight: 400
+    font-size: 12px
+
+  .hbc-highlighted
+    +mq(575)
+      font-weight: 400
+
+  .hbc-highlighted, .hbc-old
+    +mq(575)
+      display: inline-block
+      margin-top: 2px
+
+  br
+    display: none
+    +mq(575)
+      display: inline
+
+.header-container
+  +mq(479)
+    padding-right: 10px
+  +mq(374)
+    padding-right: 6px
+
+.hb-cart-service-selected
+  // cursor: pointer
+  border-radius: 7px
+  padding: 6px 10px
+  user-select: none
+  transition: background-color 0.1s ease-in-out
+  &:hover, &.active
+    // background-color: #c6d3e0
+
+.hb-cart-service-list
+  text-align: left
+  visibility: hidden
+  opacity: 0
+  position: absolute
+  z-index: 100
+  top: calc(100% + 20px)
+  right: 0
+  transition: all 0.3s ease-in, opacity 0.2s ease-in-out, top 0.2s ease-in-out
+
+  &::before
+    content: ''
+    position: absolute
+    display: block
+    bottom: 100%
+    right: 15px
+    width: 0
+    height: 0
+    border-left: 10px solid transparent
+    border-right: 10px solid transparent
+    border-bottom: 10px solid #d6e0ec
+
+  &.active
+    visibility: visible
+    opacity: 1
+    top: calc(100% + 14px)
+
+  ul
+    overflow: hidden
+    border-radius: 6px
+    background-color: #d6e0ec
+    box-shadow: 0 2px 15px 0 rgba(0,0,0,.5)
+    width: 205px
+    li
+      position: relative
+      cursor: pointer
+      user-select: none
+      padding: 13px 24px 13px 39px
+      position: relative
+      transition: background-color 0.2s ease-in
+      &:not(:last-child)::after
+        content: ''
+        display: block
+        position: absolute
+        height: 1px
+        top: 100%
+        left: 15px
+        right: 15px
+        transition: background-color 0.2s ease-in
+        background-color: #bbcde8
+      &:hover
+        background-color: #c6d3e0
+        &:not(:last-child)::after
+          background-color: transparent
+
+      .icon
+        position: absolute
+        top: 12px
+        left: 12px
+
+.hb-cart-service-list-price
+  font-size: 13px
+  margin-top: 4px
+  span
+    &:first-child
+      color: #0d802a
+      margin-right: 3px
+    &:last-child
+      position: relative
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 50%
+        left: -2px
+        right: -2px
+        height: 1px
+        background-color: rgba(74, 74, 74, 0.8)
+
+.hb-cta
+  +mq(413)
+    position: relative
+    z-index: 2
+
+.hb-cta-wrap
+  position: relative
+  z-index: 2
+  margin: 0 -15px
+  height: 100%
+  overflow: hidden
+
+.hcw-item-additional,
+.hcw-item-main
+  padding: 0 15px
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out
+
+.hcw-item-additional
+  position: absolute
+  height: 100%
+  right: 15px
+  top: 0
+  opacity: 1
+  transform: translate(0,0)
+  +mq(374)
+    visibility: hidden
+    pointer-events: none
+
+.hcw-item-main
+  position: relative
+  height: 100%
+  opacity: 0
+  transform: translate(0,100%)
+
+.header-active
+  .hcw-item-additional
+    opacity: 0
+    transform: translate(0,-100%)
+
+  .hcw-item-main
+    opacity: 1
+    transform: translate(0,0)
+
+.header-01#header
+  position: fixed
+  background: linear-gradient(135deg, rgba(246,247,252,0.12) 0%,rgba(246,247,252,0.5) 21%,rgba(246,247,252,1) 38%,rgba(246,247,252,0.6) 61%,rgba(246,247,252,0.12) 100%)
+  transition: opacity 0.15s ease-in, box-shadow 0.15s ease-in
+  > *
+    position: relative
+    z-index: 2
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(246,247,252,1)
+    opacity: 0
+    transition: opacity 0.15s ease-in
+  +mq(319)
+    position: absolute
+
+  .header-container
+    padding-right: 5px
+    +mq(1199)
+      padding-right: 15px
+
+  .header-body
+    height: 100px
+    +mq(1679)
+      height: 80px
+    +mq(1439)
+      height: 75px
+    +mq(1365)
+      height: 70px
+    +mq(767)
+      height: 65px
+    +mq(374)
+      height: 60px
+  
+  .hb-logo
+    img
+      width: 110px
+      +mq(639)
+        width: 100px
+      +mq(575)
+        width: 80px
+      +mq(374)
+        width: 72px
+
+  .logo-brand
+    +mq(575)
+      margin-left: 9px
+      padding-left: 9px
+    img
+      width: 55px
+      +mq(639)
+        width: 50px
+      +mq(575)
+        width: 40px
+      +mq(374)
+        width: 36px
+        
+
+.header-shadow
+  #header.header-01
+    box-shadow: 0 5px 34px -2px rgba(0,0,0,0.3)
+    &::before
+      opacity: 1
+      
+.header-body-short
+  justify-content: center
+  .hb-cart, .hb-cta
+    display: none
+
+#footer
+  padding: 80px 0
+  +mq(1599)
+    padding: 70px 0
+  +mq(1439)
+    padding: 60px 0
+  +mq(1365)
+    padding: 55px 0
+  +mq(1199)
+    padding: 45px 0
+  +mq(991)
+    padding: 35px 0
+  &.footer-hidden
+    display: none
+
+.footer-logo
+  margin-bottom: 20px
+  +mq(479)
+    margin-bottom: 15px
+  img
+    width: 120px
+    +mq(1199)
+      width: 100px
+    +mq(479)
+      width: 80px
+
+.footer-info
+  font-size: 14px
+  padding: 0 15px
+  text-align: center
+  +mq(479)
+    font-size: 13px
+  +mq(413)
+    font-size: 12px
+
+  br
+    +mq(479)
+      display: none
+
+
+
+

@@ -1,0 +1,780 @@
+@import "import/vars.sass"
+@import "import/base-tags.sass"
+@import "import/base-styles.sass"
+@import "import/static.sass"
+@import "import/icons.sass"
+
+@media(min-width: 1366px)
+  .container
+    max-width: 1300px
+
+@media(min-width: 1440px)
+  .container
+    max-width: 1370px
+
+@media(min-width: 1600px)
+  .container
+    max-width: 1470px
+
+.section-hero
+  position: relative
+  padding: 0
+  background-position: right top
+  background-size: cover
+  background-image: url('../img/bg-hero.jpg')
+
+.sh-content
+  position: relative
+  z-index: 2
+  height: 100vh
+  min-height: 890px
+  max-height: 1200px
+  +mq(1679)
+    min-height: 750px
+  +mq(1439)
+    min-height: 660px
+  +mq(479)
+    text-align: center
+    min-height: 530px
+  +mq(374)
+    min-height: 500px
+    max-height: 700px
+
+  > div
+    width: 100%
+
+.sh-bottom-info
+  position: absolute
+  z-index: 1
+  bottom: 88px
+  left: 0
+  width: 100%
+  +mq(1679)
+    bottom: 45px
+  +mq(1439)
+    bottom: 30px
+  +mq(479)
+    bottom: 25px
+  +mq(374)
+    bottom: 23px
+  > .container
+    padding-top: 50px
+    border-top: 1px solid rgba(255,255,255,0.6)
+    +mq(1679)
+      padding-top: 45px
+    +mq(1439)
+      padding-top: 30px
+    +mq(479)
+      padding-top: 25px
+    +mq(374)
+      padding-top: 23px
+
+.img-line
+  img
+    max-height: 40px
+    margin-right: 60px
+    +mq(991)
+      max-height: 36px
+      margin-right: 54px
+    +mq(767)
+      max-height: 34px
+      margin-right: 50px
+    +mq(575)
+      max-height: 32px
+      margin-right: 48px
+    +mq(374)
+      max-height: 31px
+      margin-right: 46px
+    &:last-child
+      margin-right: 0
+
+.section-decor-wrap
+  position: relative
+  overflow: hidden
+  > *:not(.section-decor)
+    position: relative
+    z-index: 2
+
+.section-decor
+  position: absolute
+  z-index: 1
+  width: 414px
+  transform: skew(-20deg)
+  opacity: 0.05
+  +mq(1439)
+    width: 376px
+  +mq(1365)
+    width: 340px
+  +mq(1199)
+    width: 296px
+  +mq(991)
+    width: 260px
+  +mq(639)
+    width: 220px
+
+.sd-top
+  top: 0
+  box-shadow: 0 -32px 32px rgba(0,0,0,1)
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%)
+
+.sd-bottom
+  bottom: 0
+  box-shadow: 0 32px 32px rgba(0,0,0,1)
+  background: linear-gradient(to top, rgba(255,255,255,1) 90%,rgba(255,255,255,0) 100%)
+
+.sdw-01, .sdw-03
+  .sd-top
+    right: calc(50% + 120px)
+    +mq(1439)
+      right: calc(50% + 110px)
+    +mq(1365)
+      right: calc(50% + 100px)
+    +mq(1199)
+      right: calc(50% + 90px)
+    +mq(991)
+      right: calc(50% + 70px)
+    +mq(639)
+      right: calc(50% + 54px)
+  .sd-bottom
+    left: calc(50% + 120px)
+    +mq(1439)
+      left: calc(50% + 110px)
+    +mq(1365)
+      left: calc(50% + 100px)
+    +mq(1199)
+      left: calc(50% + 90px)
+    +mq(991)
+      left: calc(50% + 70px)
+    +mq(639)
+      left: calc(50% + 54px)
+
+.sdw-01
+  .sd-top
+    bottom: 185px
+    +mq(1199)
+      bottom: 150px
+    +mq(991)
+      bottom: 120px
+    +mq(639)
+      bottom: 95px
+
+  .sd-bottom
+    top: 185px
+    +mq(1199)
+      top: 150px
+    +mq(991)
+      top: 120px
+    +mq(639)
+      top: 95px
+
+.sdw-02
+  .sd-bottom
+    top: 65px
+    left: calc(50% - 720px)
+    +mq(1439)
+      left: calc(50% - 620px)
+    +mq(1365)
+      left: calc(50% - 550px)
+    +mq(1199)
+      left: calc(50% - 470px)
+    +mq(991)
+      left: calc(50% - 395px)
+    +mq(767)
+      left: calc(50% - 270px)
+    +mq(639)
+      left: calc(50% - 250px)
+    +mq(575)
+      left: calc(50% - 230px)
+    +mq(479)
+      left: calc(50% - 205px)
+    +mq(374)
+      left: calc(50% - 200px)
+
+.sdw-03
+  .sd-top
+    bottom: 65px
+
+  .sd-bottom
+    top: 65px
+
+.tile-img-layer
+  max-width: 1440px
+  margin: 0 auto 270px
+  +mq(1439)
+    margin-bottom: 245px
+  +mq(1365)
+    margin-bottom: 200px
+  +mq(1199)
+    margin-bottom: 155px
+  +mq(991)
+    margin-bottom: 130px
+  +mq(767)
+    margin-bottom: 94px
+  +mq(575)
+    margin-right: -15px
+    margin-left: -15px
+  +mq(479)
+    margin-bottom: 85px
+  +mq(374)
+    margin-bottom: 70px
+  &:last-child
+    margin-bottom: 0
+
+.til-info
+  padding: 45px 80px
+  min-height: 415px
+  background: #033598
+  box-shadow: 0 11px 43px rgba(0,0,0,.39)
+  +mq(1439)
+    padding: 40px 55px
+    min-height: 390px
+  +mq(1365)
+    padding: 30px 35px
+    min-height: 370px
+  +mq(1199)
+    padding: 27px 30px
+    min-height: 310px
+  +mq(767)
+    padding: 30px
+    min-height: 0
+    margin: -55px 35px 0
+  +mq(479)
+    padding: 25px
+    margin: -45px 20px 0
+  +mq(374)
+    padding: 17px
+    margin: -37px 12px 0
+  ul
+    margin-bottom: 30px
+    +mq(1439)
+      margin-bottom: 24px
+    +mq(1365)
+      margin-bottom: 18px
+    +mq(1199)
+      margin-bottom: 15px
+
+.til-additional-info
+  color: #7e97ca
+  margin-bottom: 23px
+  +mq(1439)
+    margin-bottom: 18px
+  +mq(1365)
+    margin-bottom: 15px
+  +mq(1199)
+    margin-bottom: 12px
+
+.til-img-wrap
+  position: relative
+
+.til-img
+  background-position: center
+  background-size: cover
+  position: absolute
+  top: -60px
+  bottom: -60px
+  +mq(1439)
+    top: -50px
+    bottom: -50px
+  +mq(1365)
+    top: -40px
+    bottom: -40px
+  +mq(1199)
+    top: -34px
+    bottom: -34px
+  +mq(991)
+    top: -25px
+    bottom: -25px
+  +mq(767)
+    position: relative
+    height: 0
+    padding-top: 63%
+    top: 0
+    bottom: 0
+  &.til-img-right
+    right: 15px
+    left: -165px
+    +mq(1439)
+      left: -135px
+    +mq(767)
+      left: 0
+      right: 0
+  &.til-img-left
+    left: 15px
+    right: -165px
+    +mq(1439)
+      right: -135px
+    +mq(767)
+      left: 0
+      right: 0
+
+.section-info
+  background-image: url('../img/bg-info.jpg')
+  background-position: left bottom
+  background-size: 84% auto
+  background-repeat: no-repeat
+  +mq(1365)
+    background-size: 88% auto
+  +mq(1199)
+    background-size: 100% auto
+  +mq(991)
+    background-size: auto 380px
+    background-position: left calc(0% - 150px) bottom
+  +mq(767)
+    background-size: auto 410px
+    background-position: left calc(0% - 235px) bottom
+  +mq(639)
+    background-size: auto 460px
+  +mq(575)
+    background-size: auto 490px
+    background-position: left calc(0% - 345px) bottom
+  
+  .text-num-info
+    margin-top: 57px
+    color: #94e0ff
+
+.tni-item-top, .tni-item-lg-wrap, .tni-item-bottom
+  display: block
+  line-height: 1
+
+.tni-item-top, .tni-item-bottom
+  font-size: 18px
+
+.tni-item-lg-wrap
+  margin: 7px 0 9px
+
+.tni-item-lg
+  font-size: 110px
+
+.tni-item-lg-sub
+  font-size: 85px
+  margin-left: 12px
+
+.tile-img-btn-wrap
+  position: relative
+  height: 580px
+  +mq(1439)
+    height: 520px
+  +mq(1365)
+    height: 490px
+  +mq(1199)
+    height: 460px
+  +mq(991)
+    height: 415px
+  +mq(575)
+    height: 380px
+  +mq(479)
+    height: 330px
+  +mq(374)
+    height: 280px
+
+.tib-img
+  position: absolute
+  top: 0
+  bottom: 35px
+  left: 0
+  width: 100%
+  background-size: cover
+  background-position: center
+  +mq(575)
+    bottom: 50px
+
+.tib-btn
+  width: 100%
+  text-align: right
+  padding-right: 35px
+  +mq(991)
+    padding-right: 27px
+  +mq(575)
+    padding-right: 0
+    text-align: center
+
+.itd-item
+  position: relative
+
+.info-text-decor-01
+  margin-top: 45px
+  +mq(1199)
+    margin-top: 28px
+  +mq(991)
+    margin-top: 20px
+  +mq(767)
+    margin-top: 70px
+
+.itd-decor
+  position: absolute
+  top: -65px
+  left: 20px
+  font-family: $font_h
+  font-size: 120px
+  line-height: 1
+  color: rgba(255,255,255,0.1)
+  +mq(1439)
+    top: -60px
+    font-size: 110px
+  +mq(1365)
+    font-size: 100px
+    top: -52px
+  +mq(991)
+    font-size: 96px
+    top: -48px
+    left: 7px
+  +mq(767)
+    font-size: 94px
+    left: 16px
+  +mq(575)
+    font-size: 90px
+    top: -45px
+  +mq(479)
+    font-size: 87px
+  +mq(374)
+    font-size: 83px
+
+
+.itd-item
+  padding: 0 45px
+  +mq(1199)
+    padding: 0 30px
+  +mq(991)
+    padding: 0 20px
+  +mq(767)
+    padding: 0 30px
+  +mq(479)
+    flex: 0 0 100%
+    max-width: 100%
+    margin-bottom: 70px
+    &:last-child
+      margin-bottom: 0
+  +mq(374)
+    margin-bottom: 64px
+
+.mfp-bg
+  min-height: 100vh
+  min-width: 100vw
+
+.popup-animated .popup-appear
+  opacity: 0
+  transition: all 0.2s ease-in-out
+  transform: scale(0.97)
+
+.popup-animated.mfp-ready .popup-appear
+  opacity: 1
+  transform: scale(1)
+
+.popup-animated.mfp-removing .popup-appear
+  transform: scale(0.97)
+  opacity: 0
+
+.popup-animated.mfp-bg 
+  opacity: 0
+  transition: opacity 0.3s ease-out
+
+.popup-animated.mfp-ready.mfp-bg 
+  opacity: 0.8
+
+.popup-animated.mfp-removing.mfp-bg 
+  opacity: 0
+
+.tile-form
+  background-color: #fff
+  padding: 57px
+  border-radius: 4px
+  box-shadow: 0 0 45px rgba(0,0,0,0.7)
+  +mq(1439)
+    padding: 50px
+  +mq(1365)
+    padding: 46px
+  +mq(1199)
+    padding: 41px
+  +mq(767)
+    padding: 37px
+  +mq(575)
+    padding: 33px
+  +mq(374)
+    padding: 25px
+
+.tile-form-01
+  &.tile-form
+    max-width: 600px
+    margin: 20px auto
+    +mq(1199)
+      max-width: 550px
+    +mq(991)
+      max-width: 520px
+    +mq(767)
+      max-width: 500px
+    +mq(575)
+      max-width: 450px
+
+.tile-form-03
+  &.tile-form
+    max-width: 800px
+    margin: 20px auto
+    +mq(991)
+      max-width: 760px
+    // +mq(767)
+    //   max-width: 500px
+    // +mq(575)
+    //   max-width: 450px
+
+.tile-form-02
+  &.tile-form
+    max-width: 550px
+    margin-left: auto
+    margin-right: 0
+    @media (min-width: 1440px)
+      padding-top: 75px
+      padding-bottom: 75px
+    @media (min-width: 1366px)
+      padding-top: 65px
+      padding-bottom: 65px
+    @media (min-width: 992px)
+      padding-top: 60px
+      padding-bottom: 60px
+    @media (min-width: 992px) and (max-width: 1199px)
+      padding: 42px 35px 50px
+    @media (min-width: 768px) and (max-width: 991px)
+      padding: 42px 25px 50px
+    +mq(767)
+      margin: 50px auto 0
+
+.tile-form-02
+  h3
+    @media (min-width: 768px) and (max-width: 991px)
+      font-size: 26px
+  .sub-header
+    @media (min-width: 768px) and (max-width: 991px)
+      font-size: 16px
+
+.section-page-hero
+  padding: 250px 0 193px
+  +mq(1599)
+    padding: 238px 0 193px
+  +mq(1199)
+    padding: 200px 0 160px
+  +mq(991)
+    padding: 180px 0 150px
+  +mq(767)
+    padding: 170px 0 140px
+  +mq(575)
+    padding: 165px 0 135px
+  +mq(479)
+    padding: 160px 0 127px
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: none
+  > .container
+    position: relative
+    z-index: 2
+
+  &.sph-01
+    +mq(991)
+      background-position: calc(50% + 25px) 50%
+    +mq(575)
+      background-position: calc(50% - 25px) 50%
+    +mq(479)
+      background-position: calc(50% - 65px) 50%
+    +mq(374)
+      background-position: calc(50% - 95px) 50%
+
+    &::before
+      background-color: rgba(0,0,0,0.2)
+      +mq(575)
+        display: block
+
+.form-contact-header
+  margin-bottom: 35px
+  +mq(1365)
+    margin-bottom: 30px
+  +mq(1199)
+    margin-bottom: 26px
+  +mq(991)
+    margin-bottom: 24px
+
+.link-tile
+  box-shadow: 0 11px 43px rgba(0,0,0,0.39)
+  text-decoration: none !important
+  transition: box-shadow 0.2s ease-in-out
+  +mq(767)
+    max-width: 420px
+    margin: 0 auto
+  &:hover
+    box-shadow: 0 29px 83px rgba(0,0,0,0.69)
+  &, & > span
+    display: block
+
+.lt-img
+  height: 0
+  padding-top: 36.5%
+  background-size: cover
+  background-position: center
+  +mq(1365)
+    padding-top: 41%
+  +mq(1199)
+    padding-top: 48%
+  +mq(991)
+    padding-top: 52%
+  +mq(767)
+    padding-top: 45%
+  +mq(479)
+    padding-top: 48%
+
+.lt-info
+  padding: 45px
+  +mq(1599)
+    padding: 37px
+  +mq(1439)
+    padding: 35px
+  +mq(1365)
+    padding: 32px
+  +mq(1199)
+    padding: 27px
+  +mq(991)
+    padding: 20px
+  > span
+    display: block
+    &.h5
+      margin-bottom: 10px
+      @media (min-width: 1366px) and (max-width: 1439px)
+        font-size: 30px
+      @media (min-width: 1200px) and (max-width: 1365px)
+        font-size: 27px
+      @media (min-width: 768px) and (max-width: 991px)
+        font-size: 24px
+    &.h5, &.lt-cta
+      color: #fff !important
+
+.lt-additional-info
+  color: #7e97ca !important
+  min-height: 80px
+  +mq(991)
+    min-height: 74px
+  +mq(767)
+    min-height: 0
+    margin-bottom: 22px
+
+.lt-cta
+  font-size: 44px
+  line-height: 1
+  transform: translate(0,0)
+  transition: transform 0.2s ease-in-out
+  +mq(1439)
+    font-size: 41px
+  +mq(1365)
+    font-size: 40px
+  +mq(1199)
+    font-size: 38px
+  +mq(991)
+    font-size: 34px
+  +mq(575)
+    font-size: 30px
+  .link-tile:hover &
+    transform: translate(6px,0)
+
+.tile-lg-info
+  padding: 35px 45px
+  font-size: 14px
+  margin-bottom: 50px
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5)
+  background: linear-gradient(to bottom, #2d6dab 0%, #023496 100%)
+  +mq(991)
+    padding: 30px 38px
+  +mq(575)
+    padding: 23px 27px 27px
+    font-size: 13px
+  +mq(479)
+    padding: 23px 23px 25px
+    margin-bottom: 38px
+  +mq(374)
+    padding: 23px 18px 25px
+  &:last-child
+    margin-bottom: 0
+
+  .block-border-bottom
+    +mq(991)
+      padding-bottom: 18px
+      margin-bottom: 21px
+    +mq(575)
+      padding-bottom: 15px
+      margin-bottom: 18px
+  p, ul
+    &:not(.block-mb-sm)
+      margin-bottom: 10px
+  .list-dotted
+    li
+      padding-left: 15px
+      &::before
+        top: 9px
+        +mq(575)
+          top: 7px
+
+.sction-contacts
+  padding: 50px 0
+  background-color: #d5d5d5
+  background-image: url(../img/bg-contacts.jpg)
+  background-size: auto 773px
+  background-position: left calc(0% - 110px) top
+  +mq(1599)
+    background-size: auto 750px
+  +mq(1439)
+    background-size: auto 720px
+  +mq(1365)
+    background-size: auto 680px
+    background-position: left calc(0% - 90px) top
+  +mq(1199)
+    background-size: auto 660px
+    background-position: left calc(0% - 120px) top
+  +mq(991)
+    background-size: auto 600px
+  +mq(767)
+    background-position: left calc(50% + 290px) top calc(0% - 20px)
+    background-size: auto 548px
+    padding-top: 260px
+  +mq(479)
+    background-size: auto 520px
+    background-position: left calc(50% + 290px) top calc(0% - 65px)
+    padding-top: 170px
+
+  &::before
+    +mq(767)
+      content: ''
+      display: block
+      position: absolute
+      z-index: 1
+      width: 100%
+      left: 0
+      top: 180px
+      bottom: 0
+      background: linear-gradient(to bottom, rgba(213,213,213,0) 0%,rgba(213,213,213,1) 20%)
+    +mq(479)
+      top: 130px
+      background: linear-gradient(to bottom, rgba(213,213,213,0) 0%,rgba(213,213,213,1) 10%)
+
+  > *
+    +mq(767)
+      position: relative
+      z-index: 2
+
+  .list-icon
+    +mq(767)
+      max-width: 550px
+      margin: 0 auto
+  .tile-form-02.tile-form
+    +mq(767)
+      margin-top: 30px
+
+.section-full-height
+  padding: 0
+
+.sfh-content
+  height: 100vh
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>SVG</title>
+    <style>
+      * {box-sizing: border-box;}
+      body {
+        margin: 15px; text-align: center; overflow-x: hidden;
+      }
+      ul {
+        list-style-type: none; display: flex; flex-wrap: wrap; align-items: flex-start; margin: 0; padding: 0;
+      }
+      ul li {
+        width: 9.5%; margin-right: 0.555555%; border: 1px solid #ccc; border-radius: 5px; text-align: center; margin-bottom: 15px; cursor: pointer;
+      }
+      ul li:nth-child(10n) {
+        margin-right: 0;
+      }
+      h2 {
+        font-size: 15px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; margin: 0 0 20px 0;
+      }
+      ul li div {
+        padding: 15px;
+      }
+      ul li svg {
+        width: 100%; height: 100px;
+      }
+      code {
+        padding: 15px 10px; background-color: #e4e4e4; display: block;
+      }
+      code p {
+        margin: 0; font-size: 9px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+      }
+    </style>
+    <script>
+      function selectText(el) {
+          var range = document.createRange();
+          range.selectNode(el.getElementsByTagName('p')[0]);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+          document.execCommand("copy");
+      }
+    </script>
+
+    <!-- Sprite shape dimensions -->
+    <!-- <style type="text/css">
+    {{#shapes}} {{#selector.dimensions}}{{expression}}{{^last}}, {{/last}}{{/selector.dimensions}} { width: {{width.outer}}px; height: {{height.outer}}px; }
+    {{/shapes}}</style> -->
+    <!-- Sprite shape dimensions -->
+
+  </head>
+  <body>
+    <!-- Inline SVG with external sprite (IE 9-11 with polyfill only) -->
+    <section>
+      <h1>Inline SVG with external sprite (IE 9-11 with polyfill only)</h1>
+      <ul>
+        {{#shapes}}
+        <li title="{{name}}" onclick="selectText(this)">
+          <div class="icon-preview-wrap">
+            <h2>{{name}}</h2>
+            <svg class="icon {{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+              <use xlink:href="{{{example}}}#{{name}}"></use>
+            </svg>
+          </div>
+          <code><p>&lt;svg class="icon {{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}"&gt;&lt;use xlink:href="{{{example}}}#{{name}}"&gt;&lt;/use&gt;&lt;/svg&gt;</p></code>
+        </li>
+        {{/shapes}}     
+      </ul>
+    </section>
+    <!-- Inline SVG with external sprite (IE 9-11 with polyfill only) -->
+
+    <!-- Inline <symbol> SVG sprite -->
+    <!-- <svg width="0" height="0" style="position:absolute">
+    {{#shapes}}
+      {{{svg}}}
+    {{/shapes}}
+    </svg>
+    
+    <section>
+      <h1>Inline <symbol> SVG sprite</h1>
+      <ul>
+        {{#shapes}}
+        <li title="{{name}}">
+          <div class="icon-preview-wrap">
+            <h2>{{name}}</h2>
+            <svg class="icon {{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}">
+              <use xlink:href="#{{name}}"></use>
+            </svg>
+          </div>
+          <code onclick="selectText(this)"><p>&lt;svg class="icon {{#selector.dimensions}}{{#last}}{{#classname}}{{raw}}{{/classname}}{{/last}}{{/selector.dimensions}}"&gt;&lt;use xlink:href="{{{example}}}#{{name}}"&gt;&lt;/use&gt;&lt;/svg&gt;</p></code>
+        </li>
+        {{/shapes}}
+      </ul>
+    </section> -->
+    <!-- Inline <symbol> SVG sprite -->
+  </body>
+</html>

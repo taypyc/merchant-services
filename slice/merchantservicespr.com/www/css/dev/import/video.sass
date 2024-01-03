@@ -1,0 +1,103 @@
+.video-wrap
+  position: relative
+  width: 100%
+  height: 0
+  padding-top: 56.25%
+  overflow: hidden
+
+.video-container
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  overflow: hidden
+  
+  video
+    display: block
+    object-position: 50% 50%
+    object-fit: cover
+    width: 100%
+    height: 100%
+
+[data-no-video]
+  .video-controls
+    display: none
+
+.video-controls
+  user-select: none
+  z-index: 3
+  position: absolute
+  bottom: 30px
+  left: 30px
+  width: 80px
+  height: 80px
+  font-size: 80px
+  line-height: 1
+  color: #fdfdfd
+  filter: drop-shadow(0px 0px 17px rgba(0, 0, 0, .5))
+  cursor: pointer
+  transition: color 0.1s ease-in, transform 0.1s ease-in
+  +mq(1199)
+    width: 70px
+    height: 70px
+    font-size: 70px
+  +mq(575)
+    width: 60px
+    height: 60px
+    font-size: 60px
+    bottom: 22px
+    left: 22px
+  +mq(479)
+    width: 50px
+    height: 50px
+    font-size: 50px
+    bottom: 18px
+    left: 18px
+  +mq(374)
+    width: 42px
+    height: 42px
+    font-size: 42px
+    bottom: 16px
+    left: 16px
+    
+  html:not(.mt-device) &:hover, .mt-device &:active
+    transform: scale(1.1)
+    color: #fff
+
+  > div
+    position: absolute
+    top: 0
+    left: 0
+    opacity: 0
+    transition: opacity 0.1s ease-in
+    &.active
+      opacity: 1
+      &.video-controls-pause
+        opacity: 0.5
+        &:hover
+          opacity: 1
+    
+
+.video-preloader
+  z-index: 2
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-position: center
+  background-size: cover
+  opacity: 1
+  transition: opacity 0.5s ease-in
+  &.hide
+    opacity: 0
+
+
+
+
+
+
+

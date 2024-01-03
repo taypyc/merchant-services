@@ -1,0 +1,245 @@
+html
+  direction: ltr
+
+body
+  color: #6D6E71
+  font-family: $font_r
+  font-weight: 400
+  font-size: 20px
+  line-height: 1.4
+  margin: 0 auto
+  min-width: 320px
+  max-width: 1920px
+  +mq(1439)
+    font-size: 17px
+  +mq(1199)
+    font-size: 16px
+  +mq(767)
+    font-size: 15px
+  // +mq(413)
+  //   font-size: 14px
+
+  > .body
+    overflow-x: hidden
+    overflow-y: auto
+    position: relative
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+    width: 100%
+
+    .main
+      flex-grow: 1
+
+h1, h2, h3, h4, h5, h6, .h4, .h5, .h6
+  +font_poppins
+  color: #15357A
+  line-height: 1.1
+  letter-spacing: -0.02em
+
+h1
+  font-size: 55px
+  margin-bottom: 0.6em
+  font-weight: 600
+  +mq(1599)
+    font-size: 55px
+  +mq(1439)
+    font-size: 51px
+  +mq(1365)
+    font-size: 48px
+  +mq(1199)
+    font-size: 44px
+  +mq(991)
+    font-size: 36px
+  +mq(767)
+    font-size: 34px
+  +mq(639)
+    font-size: 33px
+  +mq(479)
+    font-size: 32px
+  +mq(413)
+    font-size: 30px
+  +mq(374)
+    font-size: 28px
+
+h2
+  text-align: center
+  font-size: 45px
+  color: #15357A
+  margin-bottom: 30px
+  +mq(1365)
+    font-size: 44px
+  +mq(1199)
+    font-size: 42px
+  +mq(991)
+    font-size: 39px
+  +mq(767)
+    font-size: 37px
+  +mq(575)
+    font-size: 35px
+    margin-bottom: 40px
+  +mq(479)
+    font-size: 32px
+  +mq(413)
+    font-size: 30px
+    margin-bottom: 36px
+  +mq(374)
+    font-size: 28px
+    margin-bottom: 30px
+
+h3
+  font-size: 45px
+  margin-bottom: 20px
+  +mq(1365)
+    font-size: 42px
+  +mq(1199)
+    font-size: 33px
+  +mq(767)
+    font-size: 30px
+    margin-bottom: 23px
+  +mq(639)
+    font-size: 28px
+    margin-bottom: 20px
+  +mq(575)
+    font-size: 27px
+    margin-bottom: 18px
+  +mq(479)
+    font-size: 25px
+  +mq(413)
+    font-size: 24px
+  +mq(374)
+    font-size: 22px
+    margin-bottom: 16px
+
+h4, .h4
+  font-size: 34px
+  margin-bottom: 20px
+  line-height: 1.3
+  +mq(1199)
+    font-size: 30px
+    margin-bottom: 8px
+  +mq(767)
+    font-size: 27px
+  +mq(575)
+    font-size: 25px
+  +mq(479)
+    font-size: 24px
+  +mq(413)
+    font-size: 23px
+  +mq(374)
+    font-size: 21px
+
+h5, .h5
+  font-size: 30px
+  margin-bottom: 20px
+  +mq(1199)
+    font-size: 24px
+  +mq(991)
+    font-size: 22px
+  +mq(767)
+    font-size: 21px
+  +mq(639)
+    font-size: 20px
+  +mq(479)
+    font-size: 19px
+  +mq(413)
+    font-size: 18px
+  +mq(374)
+    font-size: 16px
+
+h6, .h6
+  font-size: 25px
+  margin-bottom: 10px
+  +mq(1365)
+    font-size: 19px
+  +mq(1199)
+    font-size: 18px
+  +mq(413)
+    font-size: 17px
+
+
+.header-item-01
+  font-size: 2.5em
+  line-height: 0.9
+
+.header-item-02
+  font-size: 1.4em
+
+.header-01
+  .header-item-02
+    padding-right: 0.14em
+
+a
+  outline: none !important
+  color: #3AB8FA
+
+  &:hover, &:focus
+    color: #3AB8FA
+    text-decoration: underline
+
+  &[href^=tel], &[href^=mailto]
+    text-decoration: none
+
+    .mt-device &
+      pointer-events: auto
+
+    +mq(1199)
+      pointer-events: auto
+p, ul
+  margin: 0 0 30px
+  +mq(413)
+    margin-bottom: 16px
+
+ul
+  padding: 0
+  list-style-type: none
+
+img
+  max-width: 100%
+  height: auto
+
+textarea
+  resize: none
+
+select
+  outline: none
+
+p:last-child,
+ul:last-child,
+li:last-child,
+.form-group:last-child
+  margin-bottom: 0
+
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  -webkit-appearance: none
+
+label
+  color: #333333
+  +font_h
+  margin-bottom: 5px
+  +mq(413)
+    font-size: 14px
+
+section
+  padding: 85px 0
+  background-position: center
+  background-size: cover
+  +mq(991)
+    padding: 40px 0
+
+    &.section-benefits
+      padding-bottom: 0
+
+  &.section-signup-steps
+    +mq(767)
+      padding-bottom: 50px
+    +mq(374)
+      padding-bottom: 45px
+    // +mq(639)
+    //   padding-bottom: 40px
+    // +mq(575)
+    //   padding-bottom: 36px
+    // +mq(413)
+    //   padding-bottom: 32px
+    // +mq(374)
+    //   padding-bottom: 27px

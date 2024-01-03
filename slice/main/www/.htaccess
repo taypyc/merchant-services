@@ -1,0 +1,36 @@
+SetEnvIf Request_URI ".*" SITE_ROOT=/slice/www/
+#SetOutputFilter DEFLATE
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#Header set Cache-Control "max-age=691200, public, must-revalidate"
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+
+ErrorDocument 404 /slice/www/error.php
+RewriteRule ^404$ /slice/www/error.php [L,QSA]
+
+#https
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+#RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+#remove slash / on the end
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/+$ %{ENV:SITE_ROOT}$1 [R=301,L]
+
+RewriteRule ^index\.(html|htm|php)$ %{ENV:SITE_ROOT} [R=301,L]
+
+RewriteRule ^faq/(.*)$ %{ENV:SITE_ROOT}faq.php?target=$1 [L,QSA]
+
+RewriteRule ^equipment/(.*)$ %{ENV:SITE_ROOT}$1.php [L,QSA]
+
+RewriteRule ^careers/(.*)$ %{ENV:SITE_ROOT}careers-$1.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ %{ENV:SITE_ROOT}$1.php [L,QSA]

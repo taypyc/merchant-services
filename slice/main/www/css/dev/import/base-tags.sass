@@ -1,0 +1,273 @@
+@font-face 
+  font-family: 'Open Sans'
+  src: url('fonts/OpenSans-Bold.woff2') format('woff2'), url('fonts/OpenSans-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: auto
+
+@font-face 
+  font-family: 'Open Sans'
+  src: url('fonts/OpenSans-Light.woff2') format('woff2'), url('fonts/OpenSans-Light.woff') format('woff')
+  font-weight: 300
+  font-style: normal
+  font-display: auto
+
+@font-face 
+  font-family: 'Muli'
+  src: url('fonts/Muli-Bold.woff2') format('woff2'), url('fonts/Muli-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+  font-display: auto
+
+html
+  direction: ltr
+  background-color: #fdfdfd
+
+body
+  color: #666666
+  font-family: $font_r
+  font-weight: 300
+  font-size: 18px
+  line-height: 1.33
+  margin: 0 auto
+  min-width: 320px
+  max-width: 1920px
+  overflow-x: hidden
+  box-shadow: 0 0 157px rgba(0,0,0,0.27)
+  +mq(1439)
+    font-size: 17px
+  +mq(1199)
+    font-size: 16px
+  +mq(767)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+  > .body
+    overflow: hidden
+    position: relative
+    max-height: 100%
+
+h1, h2, h3, h4, h5, h6, .h5, .h6
+  +fh
+  color: #2b2a5d
+  line-height: 1.18
+  letter-spacing: -0.025em
+  &.text-color-header
+    color: #2b2a5d
+  .block-text-light &
+    color: #fefefe
+  
+
+h1, .h1
+  font-size: 68px
+  margin-bottom: 16px
+  +mq(1599)
+    font-size: 65px
+  +mq(1439)
+    font-size: 63px
+  +mq(1365)
+    font-size: 59px
+  +mq(1199)
+    font-size: 52px
+  +mq(991)
+    font-size: 48px
+  +mq(767)
+    font-size: 45px
+  +mq(639)
+    font-size: 42px
+  +mq(575)
+    font-size: 37px
+  +mq(479)
+    font-size: 33px
+  +mq(374)
+    font-size: 30px
+  &.header-lg
+    font-size: 96px
+    margin-bottom: 16px
+    +mq(1919)
+      font-size: 92px
+    +mq(1679)
+      font-size: 88px
+    +mq(1599)
+      font-size: 85px
+    +mq(1439)
+      font-size: 80px
+    +mq(1365)
+      font-size: 77px
+    +mq(1199)
+      font-size: 72px
+    +mq(991)
+      font-size: 64px
+    +mq(767)
+      font-size: 54px
+    +mq(639)
+      font-size: 50px
+      margin-bottom: 12px
+    +mq(575)
+      font-size: 44px
+    +mq(479)
+      font-size: 38px
+    +mq(374)
+      font-size: 34px
+      margin-bottom: 10px
+
+h2
+  font-size: 58px
+  margin-bottom: 20px
+  +mq(1679)
+    font-size: 56px
+  +mq(1599)
+    font-size: 53px
+  +mq(1439)
+    font-size: 50px
+  +mq(1365)
+    font-size: 47px
+  +mq(1199)
+    font-size: 41px
+    margin-bottom: 16px
+  +mq(991)
+    font-size: 35px
+  +mq(767)
+    font-size: 31px
+    margin-bottom: 12px
+  +mq(639)
+    font-size: 27px
+  +mq(575)
+    font-size: 24px
+  +mq(479)
+    font-size: 22px
+  +mq(374)
+    font-size: 21px
+
+h3
+  font-size: 45px
+  margin-bottom: 20px
+  +mq(1439)
+    font-size: 43px
+  +mq(1365)
+    font-size: 41px
+  +mq(1199)
+    font-size: 38px
+    margin-bottom: 18px
+  +mq(991)
+    font-size: 36px
+  +mq(639)
+    font-size: 34px
+  +mq(575)
+    font-size: 31px
+  +mq(479)
+    font-size: 29px
+    margin-bottom: 16px
+  +mq(374)
+    font-size: 27px
+    margin-bottom: 14px
+
+h4
+  font-size: 35px
+  margin-bottom: 20px
+
+h5, .h5
+  font-size: 24px
+  margin-bottom: 20px
+  +mq(1599)
+    font-size: 23px
+  +mq(1439)
+    font-size: 22px
+    margin-bottom: 17px
+  +mq(1365)
+    font-size: 21px
+  +mq(1199)
+    font-size: 20px
+  +mq(767)
+    font-size: 19px
+  +mq(639)
+    font-size: 17px
+  +mq(374)
+    font-size: 16px
+
+h6, .h6
+  font-size: 20px
+  color: #333
+  margin-bottom: 16px
+  +mq(1439)
+    font-size: 19px
+  +mq(1199)
+    font-size: 18px
+    margin-bottom: 14px
+  +mq(639)
+    font-size: 17px
+
+p, .text-paragraph
+  margin: 0 0 20px
+
+a, .link-angle
+  outline: none !important
+  color: #1c88d0
+  transition: color 0.15s linear
+
+  &:hover, &:focus
+    color: #28b1b9
+
+  &[href^=tel], &[href^=mailto]
+    pointer-events: none
+
+    .mt-device &
+      pointer-events: auto
+
+    +mq(1199)
+      pointer-events: auto
+
+ul
+  margin: 0 0 20px
+  padding: 0
+  list-style-type: none
+
+img
+  max-width: 100%
+
+textarea
+  resize: none
+
+select
+  outline: none
+
+p:last-child,
+ul:last-child,
+li:last-child,
+.form-group:last-child
+  margin-bottom: 0
+
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  -webkit-appearance: none
+
+section
+  padding: 135px 0
+  background-position: center
+  background-size: cover
+  +mq(1679)
+    padding: 120px 0
+  +mq(1599)
+    padding: 110px 0
+  +mq(1439)
+    padding: 100px 0
+  +mq(1199)
+    padding: 90px 0
+  +mq(991)
+    padding: 80px 0
+  +mq(767)
+    padding: 70px 0
+  +mq(639)
+    padding: 60px 0
+  +mq(575)
+    padding: 50px 0
+  +mq(479)
+    padding: 42px 0
+  +mq(374)
+    padding: 39px 0
+
+sup
+  font-size: 0.6em
+  top: -.6em
+
+b, strong
+  font-weight: bold

@@ -1,0 +1,263 @@
+html
+  direction: ltr
+
+body
+  color: #666666
+  font-family: $font_r
+  font-weight: 400
+  font-size: 18px
+  line-height: 1.4
+  margin: 0 auto
+  min-width: 320px
+  max-width: 1920px
+  +mq(1439)
+    font-size: 17px
+  +mq(1199)
+    font-size: 16px
+  +mq(767)
+    font-size: 15px
+  // +mq(413)
+  //   font-size: 14px
+
+  > .body
+    +mq(991)
+      overflow-x: hidden
+      overflow-y: auto
+      position: relative
+
+h1, h2, h3, h4, h5, h6, .h4, .h5, .h6
+  +font_h
+  color: #2b2a5d
+  line-height: 1.1
+  letter-spacing: -0.02em
+
+h1
+  font-size: 85px
+  line-height: 1
+  margin-bottom: 12px
+  +mq(1679)
+    font-size: 77px
+  +mq(1599)
+    font-size: 71px
+  +mq(1439)
+    font-size: 67px
+  +mq(1365)
+    font-size: 62px
+  +mq(1199)
+    font-size: 54px
+  +mq(991)
+    font-size: 43px
+  +mq(767)
+    font-size: 39px
+  +mq(639)
+    font-size: 37px
+  +mq(413)
+    font-size: 34px
+  +mq(374)
+    font-size: 30px
+
+h2
+  font-size: 50px
+  margin-bottom: 27px
+  +mq(1365)
+    font-size: 48px
+    margin-bottom: 25px
+  +mq(1199)
+    font-size: 42px
+    margin-bottom: 19px
+  +mq(991)
+    font-size: 36px
+  +mq(767)
+    font-size: 32px
+    margin-bottom: 15px
+  +mq(639)
+    font-size: 30px
+  +mq(413)
+    font-size: 28px
+  +mq(374)
+    font-size: 26px
+    margin-bottom: 12px
+  &.header-lg
+    font-size: 58px
+    +mq(1679)
+      font-size: 56px
+    +mq(1599)
+      font-size: 53px
+    +mq(1439)
+      font-size: 50px
+    +mq(1365)
+      font-size: 47px
+    +mq(1199)
+      font-size: 41px
+    +mq(991)
+      font-size: 35px
+    +mq(767)
+      font-size: 31px
+    +mq(575)
+      font-size: 27px
+    +mq(479)
+      font-size: 24px
+    +mq(374)
+      font-size: 22px
+
+h3
+  font-size: 45px
+  margin-bottom: 27px
+  +mq(1365)
+    font-size: 42px
+  +mq(1199)
+    font-size: 33px
+  +mq(767)
+    font-size: 30px
+    margin-bottom: 23px
+  +mq(639)
+    font-size: 28px
+    margin-bottom: 20px
+  +mq(575)
+    font-size: 27px
+    margin-bottom: 18px
+  +mq(479)
+    font-size: 25px
+  +mq(413)
+    font-size: 24px
+  +mq(374)
+    font-size: 22px
+    margin-bottom: 16px
+
+h4, .h4
+  font-size: 34px
+  margin-bottom: 12px
+  +mq(991)
+    font-size: 32px
+    margin-bottom: 8px
+  +mq(767)
+    font-size: 31px
+  +mq(575)
+    font-size: 30px
+  +mq(479)
+    font-size: 27px
+  +mq(413)
+    font-size: 25px
+  +mq(374)
+    font-size: 24px
+
+h5, .h5
+  font-size: 26px
+  margin-bottom: 20px
+  +mq(1199)
+    font-size: 24px
+  +mq(991)
+    font-size: 22px
+  +mq(767)
+    font-size: 21px
+  +mq(639)
+    font-size: 20px
+  +mq(479)
+    font-size: 19px
+  +mq(413)
+    font-size: 18px
+  +mq(374)
+    font-size: 16px
+
+h6, .h6
+  font-size: 20px
+  margin-bottom: 10px
+  +mq(1365)
+    font-size: 19px
+  +mq(1199)
+    font-size: 18px
+  +mq(413)
+    font-size: 17px
+
+
+.header-item-01
+  font-size: 2.5em
+  line-height: 0.9
+
+.header-item-02
+  font-size: 1.4em
+
+.header-01
+  .header-item-02
+    padding-right: 0.14em
+
+a
+  outline: none !important
+  color: #2996cc
+
+  &:hover, &:focus
+    color: #4346a2
+    text-decoration: underline
+
+  &[href^=tel], &[href^=mailto]
+    pointer-events: none
+
+    .mt-device &
+      pointer-events: auto
+
+    +mq(1199)
+      pointer-events: auto
+p, ul
+  margin: 0 0 20px
+  +mq(413)
+    margin-bottom: 16px
+
+ul
+  padding: 0
+  list-style-type: none
+
+img
+  max-width: 100%
+
+textarea
+  resize: none
+
+select
+  outline: none
+
+p:last-child,
+ul:last-child,
+li:last-child,
+.form-group:last-child
+  margin-bottom: 0
+
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  -webkit-appearance: none
+
+label
+  color: #333333
+  +font_h
+  margin-bottom: 4px
+  +mq(413)
+    font-size: 14px
+
+section
+  padding: 75px 0
+  background-position: center
+  background-size: cover
+  +mq(991)
+    padding: 65px 0
+  +mq(767)
+    padding: 58px 0
+  +mq(639)
+    padding: 50px 0
+  +mq(575)
+    padding: 46px 0
+  +mq(413)
+    padding: 42px 0
+  +mq(374)
+    padding: 39px 0
+
+  &.section-signup-steps
+    +mq(767)
+      padding-bottom: 50px
+    +mq(374)
+      padding-bottom: 45px
+    // +mq(639)
+    //   padding-bottom: 40px
+    // +mq(575)
+    //   padding-bottom: 36px
+    // +mq(413)
+    //   padding-bottom: 32px
+    // +mq(374)
+    //   padding-bottom: 27px

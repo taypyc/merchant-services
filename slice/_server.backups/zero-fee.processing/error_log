@@ -1,0 +1,4 @@
+[09-Nov-2021 11:03:27 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47
+[24-Nov-2021 05:06:43 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47
+[30-Nov-2021 14:36:25 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47
+[06-Dec-2021 23:55:29 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47

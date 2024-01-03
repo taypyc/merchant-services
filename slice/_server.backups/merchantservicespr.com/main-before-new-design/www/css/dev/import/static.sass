@@ -1,0 +1,376 @@
+html.popup-opened.desktop-device:not(.ms-ie)
+  #header
+    padding-right: 17px
+  &.opera #header
+    padding-right: 15px
+  &.ms-edge #header
+    padding-right: 12px
+
+html.mt-device #header
+  padding-right: 0 !important
+
+html.popup-opened.desktop-device:not(.ms-ie)
+  .scroll-up
+    right: 27px
+  &.opera .scroll-up
+    right: 25px
+  &.ms-edge .scroll-up
+    right: 22px
+
+html.ms-ie, html.mt-device
+  margin-right: 0 !important
+
+a.scroll-up
+  pointer-events: none
+  display: inline-block
+  position: relative
+  bottom: 10px
+  right: 10px
+  width: 50px
+  height: 50px
+  border-radius: 50%
+  font-size: 21px
+  color: #FFF
+  background: #404040
+  opacity: 0
+  position: fixed
+  text-align: center
+  text-decoration: none
+  z-index: 1040
+  transition: opacity 0.3s
+
+  +mq(991)
+    display: none !important
+
+  &.visible
+    opacity: 0.75
+    pointer-events: auto
+
+    &:hover, &:focus
+      color: #fff
+
+    &:hover
+      opacity: 1
+
+  svg
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+#header
+  width: 100%
+  min-width: 320px
+  // background: linear-gradient(to bottom, rgba(39,98,155,0.8) 0%,rgba(39,98,155,0) 100%)
+  position: fixed
+  top: 0
+  left: 0
+  box-shadow: 0 0 0 rgba(0,0,0,0)
+  z-index: 99
+  transition: box-shadow 0.2s ease-in
+  .sticky-header-active &
+    box-shadow: 0 3px 5px rgba(0,0,0,.5)
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #2d6dab
+    opacity: 0
+    transition: opacity 0.2s ease-in
+    .header-init &
+      opacity: 1
+    .sticky-header-active &
+      opacity: 1
+
+  +mq(319)
+    position: absolute
+
+.header-body
+  height: 130px
+  position: relative
+  z-index: 2
+  transition: height 0.25s ease-out
+  +mq(1599)
+    height: 120px
+  +mq(1199)
+    height: 110px
+  +mq(991)
+    height: 100px
+  +mq(575)
+    height: 94px
+  +mq(479)
+    height: 88px
+  +mq(374)
+    height: 84px
+  .sticky-header-active &
+    height: 90px
+    +mq(1599)
+      height: 85px
+    +mq(1199)
+      height: 80px
+    +mq(991)
+      height: 74px
+    +mq(575)
+      height: 68px
+    +mq(479)
+      height: 63px
+
+.anchor-wrap
+  position: relative
+.anchor-block
+  position: absolute !important
+  z-index: 0 !important
+  top: -90px
+  left: 0
+  width: 100%
+  height: 0
+  opacity: 0
+  visibility: hidden
+  pointer-events: none
+  +mq(1599)
+    top: -85px
+  +mq(1199)
+    top: -80px
+  +mq(991)
+    top: -74px
+  +mq(575)
+    top: -68px
+  +mq(479)
+    top: -63px
+
+.hb-logo a
+  display: inline-block
+
+.hb-logo
+  img, svg
+    width: 190px
+    height: auto
+    +mq(1199)
+      width: 170px
+    +mq(991)
+      width: 135px
+    +mq(767)
+      width: 150px
+    +mq(479)
+      width: 135px
+    +mq(374)
+      width: 115px
+
+.hb-phone
+  margin-left: 35px
+  +mq(1199)
+    margin-left: 30px
+  +mq(991)
+    margin-left: 15px
+  +mq(767)
+    margin-left: 27px
+  +mq(575)
+    margin-left: 24px
+  +mq(479)
+    margin-left: 18px
+  +mq(374)
+    margin-left: 15px
+  a
+    font-size: 16px
+    color: #fff
+    position: relative
+    display: inline-block
+    line-height: 1
+    text-decoration: none
+    +mq(1199)
+      font-size: 15px
+    +mq(991)
+      font-size: 12px
+    +mq(767)
+      font-size: 14px
+    +mq(374)
+      font-size: 13px
+    .icon
+      font-size: 1.1em
+      vertical-align: middle
+      margin-right: 5px
+      +mq(374)
+        margin-right: 3px
+
+.hbp-sm
+  display: none
+
+  +mq(479)
+    display: inline
+
+.hbp-lg
+  +mq(479)
+    display: none
+
+.header-btn-nav
+  display: none
+  outline: none !important
+  border: 0
+  background: transparent
+  border-radius: 0
+  box-shadow: none
+  position: relative
+  width: 44px
+  height: 44px
+  padding: 0
+  transition: all .2s ease-in-out
+
+  +mq(767)
+    display: block
+    float: right
+
+    &.header-btn-nav-active
+      background: #f8f8f8
+
+.header-btn-nav span
+  position: absolute
+  display: block
+  width: 60%
+  top: 50%
+  margin-top: -1px
+  left: 20%
+  height: 2px
+  background: #fff
+  transition: all .2s ease-in-out
+
+.header-btn-nav span:before, .header-btn-nav span:after
+  display: block
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  background: #fff
+  left: 0
+  transition: all .25s ease-in-out
+
+.header-btn-nav span:before
+  top: -7px
+
+.header-btn-nav span:after
+  bottom: -7px
+
+.header-btn-nav-active.header-btn-nav span
+  background: transparent
+
+.header-btn-nav.header-btn-nav-active span:before
+  transform: translateY(7px) rotate(135deg)
+
+.header-btn-nav.header-btn-nav-active span:after
+  transform: translateY(-7px) rotate(-135deg)
+
+.header-btn-nav.header-btn-nav-active span:before, .header-btn-nav.header-btn-nav-active span:after
+  background: #2c2e8d
+
+.header-nav
+  &:after
+    display: table
+    content: " "
+
+  +mq(767)
+    visibility: hidden
+    opacity: 0
+    overflow: hidden
+    position: absolute
+    z-index: 100
+    top: 100%
+    right: -6px
+    box-shadow: 0 0 0 0 rgba(0,0,0,.2)
+    transition: all 0.2s ease-in, opacity 0.2s ease-in, right 0.2s ease-in
+
+    &.header-nav-active
+      right: 0
+      visibility: visible
+      opacity: 1
+      box-shadow: 0px 3px 3px 0 rgba(0,0,0,.2)
+
+.hn-menu
+  margin: 0
+
+  +mq(767)
+    float: none
+    overflow: hidden
+    width: 190px
+    margin: 0
+    background: #f8f8f8
+
+  & > li
+    margin-right: 39px
+    +mq(1199)
+      margin-right: 34px
+    +mq(991)
+      margin-right: 20px
+    +mq(767)
+      width: 100%
+      margin-right: 0
+    &:last-child
+      margin-right: 0
+
+    > a
+      padding: 5px 3px
+      display: block
+      position: relative
+      font-size: 16px
+      color: #fff
+      line-height: 1
+      text-decoration: none
+      +mq(1199)
+        font-size: 15px
+      +mq(991)
+        font-size: 13px
+        padding: 0 3px
+      +mq(767)
+        font-size: 16px
+        padding: 12px 15px
+        color: #2c2e8d
+        text-align: right
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        height: 1px
+        left: 50%
+        right: 50%
+        top: 100%
+        background-color: #fff
+        opacity: 0.3
+        transition: left 0.14s ease-in-out, right 0.14s ease-in-out, opacity 0.1s ease-in
+        +mq(767)
+          left: 15px
+          right: 15px
+          opacity: 1
+          background-color: rgba(44, 46, 141, 0.16)
+
+      &:hover::before
+        left: 0
+        right: 0
+        opacity: 1
+
+    &:last-child
+      a
+        +mq(767)
+          &::before
+            display: none
+
+#footer
+  padding: 35px 0
+  background-color: #f2f2f2
+  color: #728fa3
+  font-size: 16px
+
+.footer-logo
+  +mq(767)
+    text-align: center
+    margin-bottom: 14px
+  img
+    max-width: 150px
+
+.footer-info
+  text-align: right
+  font-size: 14px
+  +mq(767)
+    text-align: center

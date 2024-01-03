@@ -1,0 +1,12 @@
+$font_r: 'Roboto', sans-serif
+$tile_shd: 0 0 117px rgba(114, 114, 114, 0.34)
+$brd_rs_sm: 12px
+$brd_rs_sm_res: 9px
+
+@mixin font_h($fw:600)
+  font-family: 'Raleway', sans-serif
+  font-weight: $fw
+
+@mixin mq($width)
+  @media (max-width: $width + 'px')
+    @content

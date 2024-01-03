@@ -1,0 +1,235 @@
+@import "import/vars.sass"
+
+main
+  margin: 0 auto
+  max-width: 1200px
+
+.input__wrapper
+  width: 100%
+  position: relative
+  text-align: center
+  margin: 0 auto
+
+.input__file-icon-wrapper
+  width: 33%
+  flex: 1 1 33%
+  display: flex
+  align-items: center
+  justify-content: center
+  border-right: 1px solid #fff
+  +mq(639)
+    width: 25%
+    flex: 1 1 25%
+  +mq(374)
+    width: 20%
+    flex: 1 1 20%
+    justify-content: start
+
+.input__file-button-textwrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0 18px 24px 0
+  height: auto
+  flex-wrap: wrap
+  width: 67%
+  width: calc(67% - 18px)
+  +mq(639)
+    width: calc(75% - 14px)
+    margin: 0 14px 24px 0
+  +mq(413)
+    width: calc(75% - 10px)
+    margin: 0 10px 24px 0
+  +mq(374)
+    width: calc(80% - 0px)
+    margin: 0 0 24px 0
+
+.input__file-button-textwrapper--success
+  padding-bottom: 0
+
+.input__file-button-notice
+  color: #666
+  margin: 0 auto 8px
+  line-height: 1
+  font-weight: 900
+  height: 16px
+  .mt-device &, &.hidden
+    opacity: 0
+    visibility: hidden
+
+.input__file-button-text
+  display: flex
+  justify-content: center
+  align-items: center
+  line-height: 1
+  min-height: 3rem
+  padding: 0.625rem 0.5rem
+  border-radius: 0.25rem
+  background-color: #bcddff
+  color: rgb(25, 118, 211)
+  flex: 1 1 100%
+  flex-wrap: wrap
+  width: 100%
+  transition: background-color 0.1s ease-in
+
+.input__file-button-text-line
+  margin: 0 auto
+  width: 100%
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+
+.input__file-button-text--success
+  background-color: #d0e8d1
+  color: rgb(76, 175, 80)
+.input__file-button-text--error
+  background-color: #fce2e1
+  color: #ff4e42
+
+.input__file-typenotice
+  position: absolute
+  bottom: 8px
+  left: 0
+  width: 100%
+  line-height: 1
+  font-weight: 500
+  color: #999
+
+.input__file-button-notice, .input__file-typenotice
+  +mq(413)
+    font-size: 13px
+  +mq(374)
+    font-size: 12px
+
+.input__file-button, .input__file, .slide-block__headline
+  width: 510px
+  +mq(639)
+    width: 100%
+
+.input__file-button
+  position: relative
+  z-index: 1
+  color: #ccc
+  background: #fbfafb
+  border: 2px dashed #ccc
+  font-size: 16px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  border-radius: 0.25rem
+  margin: 0 auto
+  cursor: pointer
+  padding: 22px
+  transition: border-color 0.1s ease-in
+  +mq(639)
+    padding: 15px
+    font-size: 1em
+  +mq(374)
+    padding: 10px
+  &.input__file-button--error
+    border-color: #ff4e42
+
+.input__file
+  opacity: 0
+  position: absolute
+  z-index: 2
+  top: 0
+  left: 50%
+  transform: translate3d(-50%, 0, 0)
+  height: 100%
+  cursor: pointer
+  &[disabled], &--disabled
+    cursor: default
+    z-index: 1
+    & + .input__file-button
+      cursor: default
+  
+  &.input__file--success
+    cursor: default
+  &:hover:not(.input__file--success) + .input__file-button:not(.input__file-button--error), 
+  &.input__file--dragover:not(.input__file--success) + .input__file-button:not(.input__file-button--error)
+    border-color: #3ab8fa
+    .input__file-button-text
+      background-color: #cde4fb
+
+.slide-block:not(:first-child)
+  .slide-block__headline
+    border-top: 1px solid #ccc
+.slide-block:not(:last-child)
+  .slide-block__body
+    padding-bottom: 35px
+
+.slide-block__headline
+  +font_h
+  font-size: 23px
+  cursor: pointer
+  margin: 0 auto
+  padding: 18px 1.25rem 18px 0
+  background-repeat: no-repeat
+  background-size: 1rem
+  background-position: right
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjNjY2IiBkPSJNMjQwLjk3MSAxMzAuNTI0bDE5NC4zNDMgMTk0LjM0M2M5LjM3MyA5LjM3MyA5LjM3MyAyNC41NjkgMCAzMy45NDFsLTIyLjY2NyAyMi42NjdjLTkuMzU3IDkuMzU3LTI0LjUyMiA5LjM3NS0zMy45MDEuMDRMMjI0IDIyNy40OTUgNjkuMjU1IDM4MS41MTZjLTkuMzc5IDkuMzM1LTI0LjU0NCA5LjMxNy0zMy45MDEtLjA0bC0yMi42NjctMjIuNjY3Yy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFMMjA3LjAzIDEzMC41MjVjOS4zNzItOS4zNzMgMjQuNTY4LTkuMzczIDMzLjk0MS0uMDAxeiI+PC9wYXRoPjwvc3ZnPg==")
+  transition: background 0.15s 0s linear
+  +mq(639)
+    font-size: 1.3em
+    padding: 16px 1.25rem 16px 0
+  +mq(413)
+    font-size: 1.1em
+    padding: 15px 1.25rem 15px 0
+  +mq(374)
+    font-size: 1em
+    padding: 14px 1.25rem 14px 0
+
+#app
+  position: relative
+  min-height: 240px
+
+.loader-fileloader
+  &.loader-wrap
+    &.loader-active
+      min-width: auto
+      min-height: 240px
+      position: absolute
+
+@keyframes UpDown
+  0%
+    transform: translate(0, 0)
+  25%
+    transform: translate(0, 1rem)
+  75%
+    transform: translate(0, -1rem)
+  100%
+    transform: translate(0, 0)
+
+.input__file-icon
+  max-width: 100%
+  width: 70px
+  height: 70px
+  +mq(639)
+    width: 60px
+    height: 60px
+  +mq(374)
+    width: 45px
+    height: 45px
+
+.input__file-icon__arrow--active
+  fill: #55b4f6
+  animation: UpDown 1s linear infinite
+
+.slide-block__headline--collapsed
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48cGF0aCBmaWxsPSIjNjY2IiBkPSJNMjA3LjAyOSAzODEuNDc2TDEyLjY4NiAxODcuMTMyYy05LjM3My05LjM3My05LjM3My0yNC41NjkgMC0zMy45NDFsMjIuNjY3LTIyLjY2N2M5LjM1Ny05LjM1NyAyNC41MjItOS4zNzUgMzMuOTAxLS4wNEwyMjQgMjg0LjUwNWwxNTQuNzQ1LTE1NC4wMjFjOS4zNzktOS4zMzUgMjQuNTQ0LTkuMzE3IDMzLjkwMS4wNGwyMi42NjcgMjIuNjY3YzkuMzczIDkuMzczIDkuMzczIDI0LjU2OSAwIDMzLjk0MUwyNDAuOTcxIDM4MS40NzZjLTkuMzczIDkuMzcyLTI0LjU2OSA5LjM3Mi0zMy45NDIgMHoiPjwvcGF0aD48L3N2Zz4=")
+
+.slide-block__headline--success
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjNGNhZjUwIiBkPSJNMTczLjg5OCA0MzkuNDA0bC0xNjYuNC0xNjYuNGMtOS45OTctOS45OTctOS45OTctMjYuMjA2IDAtMzYuMjA0bDM2LjIwMy0zNi4yMDRjOS45OTctOS45OTggMjYuMjA3LTkuOTk4IDM2LjIwNCAwTDE5MiAzMTIuNjkgNDMyLjA5NSA3Mi41OTZjOS45OTctOS45OTcgMjYuMjA3LTkuOTk3IDM2LjIwNCAwbDM2LjIwMyAzNi4yMDRjOS45OTcgOS45OTcgOS45OTcgMjYuMjA2IDAgMzYuMjA0bC0yOTQuNCAyOTQuNDAxYy05Ljk5OCA5Ljk5Ny0yNi4yMDcgOS45OTctMzYuMjA0LS4wMDF6Ij48L3BhdGg+PC9zdmc+")
+
+.input__file-another
+  border-radius: 0.25em
+  background: #bcddff
+  color: #1976d3
+  cursor: pointer
+  padding: 0.25em 0.5em
+  align-self: center
+  font-weight: 600
+  user-select: none
+  font-size: 0.875em

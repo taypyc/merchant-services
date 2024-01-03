@@ -1,0 +1,2333 @@
+@import "import/vars.sass"
+@import "import/base-tags.sass"
+@import "import/base-styles.sass"
+@import "import/static.sass"
+@import "import/icons.sass"
+
+@media (min-width: 576px)
+  .container 
+    max-width: 100%
+
+@media (min-width: 768px)
+  .container 
+    max-width: 750px
+
+@media (min-width: 992px)
+  .container 
+    max-width: 970px
+
+@media (min-width: 1200px)
+  .container 
+    max-width: 1170px
+
+@media(min-width: 1366px)
+  .container
+    max-width: 1330px
+
+@media(min-width: 1440px)
+  .container
+    max-width: 1410px
+
+@media(min-width: 1600px)
+  .container
+    max-width: 1520px
+
+.form-application
+  max-width: 1100px
+  margin: 0 auto
+
+.application-form-wrap
+  margin-left: -18px
+  margin-right: -18px
+  +mq(767)
+    margin-left: -15px
+    margin-right: -15px
+
+.form-files
+  padding: 0 3px
+  +mq(767)
+    padding: 0 18px
+  +mq(374)
+    padding: 0 2px
+
+.fa-step-item
+  padding: 0 18px 25px
+  visibility: hidden
+  +mq(767)
+    padding: 0 33px 25px
+  +mq(374)
+    padding: 0 17px 25px
+  .form-application-initialized &
+    visibility: visible
+
+.fa-step-device
+  max-width: 890px
+  margin-left: auto
+  margin-right: auto
+    
+  +mq(767)
+    margin-top: 72px
+  +mq(479)
+    margin-top: 65px
+  +mq(413)
+    margin-top: 60px
+  +mq(374)
+    margin-top: 55px
+  > div
+    padding: 0 19px
+    margin-top: 90px
+    +mq(991)
+      padding: 0 9px
+      margin-top: 84px
+    +mq(767)
+      padding: 0 15px
+      margin-top: 0
+      margin-bottom: 80px
+      &:last-child
+        margin-bottom: 0
+  &:first-child
+    +mq(767)
+      margin-top: 80px
+
+.fa-step-information
+  color: #333
+  margin: 50px 0 35px
+  padding: 30px
+  border-radius: 15px
+  background-color: #f1f1f1
+  font-weight: 300
+  border: 2px dashed #ccc
+  +mq(1199)
+    padding: 25px
+  +mq(991)
+    padding: 22px
+  +mq(575)
+    padding: 20px
+  strong
+    font-weight: 400
+    color: #000
+  h5, p
+    margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0
+
+.ahs-item, .fa-step-item
+  outline: none
+  user-select: text
+
+.iil-icon
+  font-size: 42px
+  line-height: 1
+  +mq(639)
+    font-size: 38px
+  +mq(479)
+    font-size: 35px
+  +mq(374)
+    font-size: 33px
+
+.iil-description
+  +font_h
+  font-size: 16px
+  color: #000
+  line-height: 1.2
+  +mq(639)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+  +mq(374)
+    font-size: 12px
+
+.iil-description-01
+  +font_h
+  font-size: 16px
+  color: #00ace1
+  line-height: 1.05
+  +mq(575)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+  +mq(374)
+    font-size: 13px
+  > span
+    display: none
+  #calc-annual-savings-d1
+    display: inline-block
+
+.iil-highlighted
+  font-size: 34px
+  color: #00ace1
+  +mq(639)
+    font-size: 31px
+  +mq(575)
+    font-size: 29px
+  +mq(479)
+    font-size: 27px
+  +mq(374)
+    font-size: 24px
+
+.iil-additional
+  font-size: 24px
+  line-height: 1.1
+  color: #666666
+  font-weight: 300
+  +mq(1199)
+    font-size: 23px
+    width: 100%
+    text-align: center
+    margin-top: 18px
+  +mq(991)
+    font-size: 21px
+  +mq(767)
+    font-size: 20px
+  +mq(639)
+    font-size: 19px
+  +mq(575)
+    font-size: 18px
+  +mq(479)
+    font-size: 15px
+  +mq(413)
+    font-size: 14px
+
+.icon-info-line
+  .iil-icon
+    padding-right: 7px
+  .iil-description
+    padding-right: 15px
+  .iil-description-01
+    padding-right: 5px
+  .iil-highlighted
+    padding-right: 34px
+    +mq(1199)
+      padding-right: 0
+
+.tile-info-divided
+  max-width: 930px
+  margin-left: auto
+  margin-right: auto
+  background-color: rgba(232, 231, 231, 0.55)
+  box-shadow: 0 0 32px rgba(122, 122, 122, 0.53)
+
+  > [class*="col-"]
+    padding: 30px 35px
+    +mq(991)
+      padding: 27px 30px
+    +mq(767)
+      padding: 23px 23px
+    +mq(639)
+      padding: 17px
+    +mq(575)
+      padding: 15px
+    +mq(479)
+      padding: 20px
+    +mq(374)
+      padding: 16px
+
+.tid-item
+  color: #666666
+  font-size: 16px
+  line-height: 1.25
+  font-weight: 300
+  position: relative
+  +mq(767)
+    font-size: 14px
+  +mq(639)
+    font-size: 13px
+  +mq(575)
+    font-size: 12px
+  h6
+    color: #333
+    +mq(767)
+      font-size: 16px
+    +mq(639)
+      font-size: 15px
+      margin-bottom: 7px
+    +mq(575)
+      font-size: 13px
+  p
+    margin-bottom: 17px
+    +mq(767)
+      margin-bottom: 12px
+    +mq(639)
+      margin-bottom: 10px
+    +mq(575)
+      margin-bottom: 7px
+    &:last-child
+      margin-bottom: 0
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 35px
+    bottom: 35px
+    width: 2px
+    left: calc(100% - 1px)
+    background-color: rgba(232, 231, 231, 0.7)
+.tid-item.active
+  color: rgba(255,255,255,0.73)
+  +mq(479)
+    flex-basis: 0
+    flex-grow: 1
+    width: auto
+    max-width: 100%
+  h6
+    color: #fff
+    +mq(479)
+      font-size: 14px
+  &::before
+    display: none
+
+.tid-item
+  &:not(.active) 
+    +mq(479)
+      padding: 0 !important
+      flex-basis: 0
+      flex-grow: 0
+      max-width: none
+      flex: 0
+    .tid-item-content
+      +mq(479)
+        position: relative
+        height: 100%
+        width: 75px
+      +mq(413)
+        width: 70px
+      +mq(374)
+        width: 66px
+      p
+        +mq(479)
+          display: none
+      h6
+        +mq(479)
+          position: absolute
+          top: 50%
+          left: 50%
+          width: 120px
+          text-align: center
+          margin-bottom: 0
+          transform-origin: 50% 50%
+          transform: translate(-50%, -50%) rotate(-90deg) 
+          letter-spacing: 0.03em
+
+      
+.tid-item-content
+  position: relative
+
+.tid-item-arrows
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #649be6
+
+  &::before, &::after
+    content: ''
+    position: absolute
+    display: block
+    width: 0
+    height: 0
+
+  &::before
+    top: 27px
+    left: 100%
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+    border-left: 14px solid #649be6
+    +mq(991)
+      top: 23px
+    +mq(767)
+      top: 21px
+      border-width: 12px
+    +mq(639)
+      top: 15px
+      border-width: 9px
+    +mq(575)
+      top: 14px
+      border-width: 7px
+    +mq(479)
+      top: 50%
+      margin-top: -9px
+
+  &::after
+    top: 100%
+    left: 35px
+    border-left: 38px solid transparent
+    border-right: 38px solid transparent
+    border-top: 38px solid #649be6
+    +mq(767)
+      border-width: 33px
+    +mq(639)
+      left: 50%
+      margin-left: -37px
+    +mq(479)
+      border-width: 27px
+      margin-left: -30px
+
+.tile-info-divided
+  border-radius: 12px
+  +mq(767)
+    margin-left: -15px
+    margin-right: -15px
+  +mq(575)
+    margin-left: -22px
+    margin-right: -22px
+  +mq(479)
+    margin-left: -10px
+    margin-right: -10px
+    min-height: 145px
+  +mq(374)
+    margin-left: -3px
+    margin-right: -3px
+
+  > .tid-item.active:first-child .tid-item-arrows
+    border-top-left-radius: 12px
+    border-bottom-left-radius: 12px
+
+.section-hero
+  position: relative
+  padding: 0
+  > .container
+    position: relative
+    z-index: 3
+
+.sh-wrap
+  height: 100vh
+  max-height: 1200px
+  min-height: 860px
+  +mq(1679)
+    min-height: 800px
+    padding-bottom: 20px
+  +mq(1599)
+    padding-bottom: 33px
+  +mq(1439)
+    min-height: 790px
+  +mq(1365)
+    min-height: 690px
+    padding-bottom: 60px
+  +mq(1199)
+    max-height: 768px
+    padding-bottom: 27px
+  +mq(991)
+    max-height: none
+    min-height: 0
+    height: auto
+    padding: 90px 0 100px
+  +mq(639)
+    padding: 90px 0
+  +mq(575)
+    padding: 100px 0 20px
+  +mq(413)
+    padding: 90px 0 20px
+  +mq(374)
+    padding: 80px 0 20px
+
+.sh-main
+  width: 52%
+  margin-left: auto
+  position: relative
+  +mq(767)
+    width: auto
+  +mq(575)
+    margin-right: auto
+    text-align: center
+  > * 
+    position: relative
+    z-index: 2
+
+  .list-circle
+    text-align: left
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    top: 0
+    left: -45px
+    right: 0
+    height: 100%
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.6) 10%)
+    +mq(575)
+      display: none
+
+.sh-main-heading
+  +mq(575)
+    text-align: left
+    display: inline-block
+
+.sh-bg
+  position: absolute
+  z-index: 1
+  top: 0
+  left: 0
+  background-repeat: no-repeat
+
+  &.sh-bg-01
+    right: calc(50% + 100px)
+    bottom: 90px
+    overflow: hidden
+    // background-position: right bottom
+    // background-size: auto 84%
+    +mq(1365)
+      right: calc(50% + 80px)
+      // background-size: auto 85%
+    +mq(1199)
+      right: calc(50% + 30px)
+      // background-size: auto 81%
+    +mq(991)
+      right: calc(50% - 10px)
+    +mq(767)
+      // background-size: auto 79%
+      right: calc(50% - 5px)
+    +mq(639)
+      bottom: 100px
+      // background-size: auto 370px
+      right: calc(50% - 2px)
+    +mq(575)
+      position: relative
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      text-align: center
+      padding-right: 40px
+      padding-bottom: 50px
+    +mq(413)
+      padding-right: 50px
+
+    img
+      position: absolute
+      bottom: 0
+      right: 0
+      width: auto
+      height: 84%
+      max-width: none
+      +mq(1365)
+        height: 85%
+      +mq(1199)
+        height: 81%
+      +mq(767)
+        height: 79%
+      +mq(639)
+        height: 370px
+      +mq(575)
+        position: relative
+      +mq(413)
+        height: 320px
+      +mq(374)
+        height: 280px
+
+.sh-bottom-info
+  position: absolute
+  z-index: 2
+  left: 0
+  bottom: 0
+  width: 100%
+  padding: 45px 0
+  +mq(1599)
+    padding: 40px 0
+  +mq(1365)
+    padding: 35px 0
+  +mq(1199)
+    padding: 33px 0
+  +mq(991)
+    padding: 27px 0
+  +mq(639)
+    padding: 25px 0
+  +mq(575)
+    padding: 22px 0
+  > *
+    position: relative
+    z-index: 2
+
+.sh-bottom-info-01
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    z-index: 1
+    left: 0
+    bottom: 90px
+    top: -90px
+    width: 100%
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.85) 60%, rgba(255,255,255,0.95) 75%, rgba(255,255,255,1) 100%)
+    +mq(639)
+      top: -100px
+    +mq(575)
+      top: -40px
+      bottom: 50px
+
+  .featured-logos-line > div:first-child
+    +mq(575)
+      display: none
+  .featured-logos-line > div:nth-child(4)
+    +mq(413)
+      display: none
+
+.featured-logos-line
+  font-size: 26px
+  color: #a9a9a9
+  +mq(1599)
+    font-size: 25px
+  +mq(1365)
+    font-size: 22px
+  +mq(1199)
+    font-size: 20px
+  +mq(991)
+    font-size: 16px
+  +mq(767)
+    font-size: 14px
+  +mq(639)
+    font-size: 13px
+  +mq(575)
+    font-size: 12px
+
+  > *
+    margin-right: 45px
+    &:last-child
+      margin-right: 0
+
+    +mq(1439)
+      margin-right: 42px
+    +mq(1199)
+      margin-right: 39px
+    +mq(991)
+      margin-right: 30px
+    +mq(639)
+      margin-right: 27px
+    +mq(479)
+      margin-right: 22px
+    +mq(374)
+      margin-right: 19px
+
+  img
+    max-height: 40px
+    width: auto
+    +mq(1599)
+      max-height: 36px
+    +mq(1365)
+      max-height: 33px
+    +mq(1199)
+      max-height: 30px
+    +mq(991)
+      max-height: 25px
+    +mq(767)
+      max-height: 20px
+    +mq(639)
+      max-height: 19px
+    +mq(479)
+      max-height: 17px
+
+.sh-logo
+  margin-bottom: 15px
+  img
+    width: 140px
+    +mq(639)
+      width: 130px
+    +mq(413)
+      width: 120px
+    +mq(374)
+      width: 110px
+
+.sh-01
+  .sh-wrap
+    padding-bottom: 50px
+    padding-top: 0
+    +mq(1199)
+      padding-bottom: 30px
+    +mq(991)
+      height: 650px
+      padding-bottom: 20px
+    +mq(767)
+      height: 600px
+    +mq(639)
+      height: 520px
+      padding-bottom: 80px
+    +mq(575)
+      height: auto
+      padding: 35px 0 25px
+
+  .sh-main
+    +mq(767)
+      width: 54%
+    +mq(575)
+      width: 100%
+    &::before
+      display: none
+
+    .sh-main-01
+      +mq(575)
+        width: 240px
+        margin: 0 auto
+
+    .sh-main-02
+      font-size: 14px
+      +mq(1199)
+        padding-bottom: 20px
+      +mq(991)
+        padding-bottom: 55px
+        font-size: 12px
+      +mq(767)
+        padding-bottom: 75px
+      +mq(639)
+        padding-bottom: 40px
+      +mq(575)
+        max-width: 410px
+        margin: 0 auto
+        padding: 0 20px
+      +mq(479)
+        padding: 0
+      h3
+        margin-bottom: 14px
+        +mq(639)
+          margin-bottom: 5px
+      p
+        +mq(639)
+          margin-bottom: 10px
+
+.wrap-info-img-01
+  +mq(575)
+    flex-wrap: wrap
+
+.wii01-img-item
+  padding: 0 35px
+  position: relative
+  +mq(991)
+    padding: 0 32px
+  +mq(767)
+    padding: 0 29px
+  +mq(639)
+    padding: 0 24px
+  +mq(575)
+    order: 2
+    width: 100%
+    text-align: center
+    margin-top: 24px
+  img
+    width: 256px
+    +mq(1439)
+      width: 240px
+    +mq(991)
+      width: 190px
+    +mq(767)
+      width: 150px
+    +mq(639)
+      width: 140px
+    +mq(575)
+      width: 210px
+    +mq(479)
+      width: 200px
+    +mq(413)
+      width: 185px
+    +mq(374)
+      width: 164px
+
+.wii01-img-item-vertical
+  // +font_h
+  // font-size: 56px
+  // white-space: nowrap
+  // display: none
+  // position: absolute
+  // opacity: 0.8
+  // +mq(575)
+  //   display: block
+  // +mq(479)
+  //   font-size: 51px
+  // +mq(413)
+  //   font-size: 46px
+  // +mq(374)
+  //   font-size: 39px
+
+  // &:first-child
+  //   transform-origin: 0 0
+  //   transform: rotate(-90deg)
+  //   left: calc(50% - 155px)
+  //   top: calc(50% + 80px)
+  //   color: #9c8181
+  //   +mq(479)
+  //     left: calc(50% - 147px)
+  //   +mq(413)
+  //     left: calc(50% - 142px)
+  //     top: calc(50% + 70px)
+  //   +mq(374)
+  //     left: calc(50% - 118px)
+  //     top: calc(50% + 55px)
+    
+  // &:last-child
+  //   transform-origin: 0 100%
+  //   transform: rotate(-90deg)
+  //   left: calc(50% + 144px)
+  //   top: calc(50% - 20px)
+  //   color: #386db5
+  //   +mq(479)
+  //     top: calc(50% - 23px)
+  //     left: calc(50% + 140px)
+  //   +mq(413)
+  //     top: calc(50% - 24px)
+  //     left: calc(50% + 134px)
+  //   +mq(374)
+  //     top: calc(50% - 27px)
+  //     left: calc(50% + 110px)
+  +font_h
+  text-transform: uppercase
+  font-size: 36px
+  line-height: 1
+  white-space: nowrap
+  display: none
+  position: absolute
+  opacity: 0.5
+  +mq(575)
+    display: block
+  +mq(479)
+    font-size: 32px
+  +mq(413)
+    font-size: 29px
+  +mq(374)
+    font-size: 27px
+  &:first-child
+    transform-origin: 0 0
+    transform: rotate(-90deg)
+    left: calc(50% - 127px)
+    top: calc(50% + 75px)
+    color: #9c8181
+    +mq(479)
+      left: calc(50% - 118px)
+      top: calc(50% + 55px)
+    +mq(413)
+      left: calc(50% - 110px)
+      top: calc(50% + 45px)
+    +mq(374)
+      left: calc(50% - 97px)
+    
+  &:last-child
+    transform-origin: 0 100%
+    transform: rotate(-90deg)
+    left: calc(50% + 124px)
+    top: calc(50% + 3px)
+    color: #386db5
+    +mq(479)
+      top: calc(50% - 5px)
+      left: calc(50% + 114px)
+    +mq(413)
+      top: calc(50% - 15px)
+      left: calc(50% + 108px)
+    +mq(374)
+      top: calc(50% - 10px)
+      left: calc(50% + 95px)
+
+.wii01-info-item
+  padding-top: 65px
+  +mq(991)
+    padding-top: 35px
+    padding-left: 0
+    padding-right: 0
+  +mq(767)
+    padding-top: 20px
+  +mq(575)
+    order: 1
+    width: 50%
+    padding-top: 12px
+    padding-left: 25px
+  +mq(413)
+    padding-left: 18px
+  +mq(374)
+    padding-left: 14px
+
+.wii01-header
+  margin-bottom: 55px
+  position: relative
+  padding-left: 56px
+  +mq(991)
+    margin-bottom: 45px
+  +mq(767)
+    margin-bottom: 36px
+    padding-left: 50px
+  +mq(639)
+    padding-left: 47px
+  +mq(374)
+    padding-left: 42px
+
+  .icon, .img-icon
+    position: absolute
+    font-size: 42px
+    line-height: 1
+    top: 50%
+    left: 0
+    transform: translate(0,-50%)
+    +mq(991)
+      font-size: 39px
+    +mq(767)
+      font-size: 36px
+    +mq(639)
+      font-size: 34px
+    +mq(374)
+      font-size: 30px
+
+  .icon
+    color: #bcbbbb
+
+  &.h5
+    line-height: 1
+
+  br
+    display: none
+    +mq(1199)
+      display: inline
+
+.wii01-info-item-text-right
+  text-align: right
+  &.wii01-info-item
+    +mq(575)
+      padding-left: 0
+      padding-right: 25px
+    +mq(413)
+      padding-right: 18px
+    +mq(374)
+      padding-right: 14px
+  .wii01-header
+    padding-left: 0
+    padding-right: 56px
+    +mq(767)
+      padding-right: 50px
+    +mq(639)
+      padding-right: 47px
+    +mq(374)
+      padding-right: 42px
+    .icon, .img-icon
+      left: auto
+      right: 0
+
+.tile-icon-info
+  padding: 60px 90px
+  background-color: #fff
+  box-shadow: $tile_shd
+  border-radius: $brd_rs_sm
+  +mq(1599)
+    padding: 60px 65px
+  +mq(1439)
+    padding: 50px
+  +mq(1365)
+    padding: 38px
+  +mq(1199)
+    padding: 27px 24px
+  +mq(639)
+    padding: 27px 24px 0
+
+  .tii-item
+    font-weight: 300
+
+.tile-icon-info-01
+  .tii-cta-header
+    @media (min-width: 992px) and (max-width: 1199px)
+      font-size: 37px
+
+  .tii-item
+    +mq(639)
+      flex: 0 0 100%
+      max-width: 470px
+      margin-left: auto
+      margin-right: auto
+
+.tii-cta
+  padding-right: 80px
+  +mq(1599)
+    padding-right: 65px
+  +mq(1439)
+    padding-right: 55px
+  +mq(1365)
+    padding-right: 45px
+  +mq(1199)
+    padding-right: 35px
+  +mq(991)
+    padding-right: 15px
+    text-align: center
+    margin-bottom: 27px
+
+.tii-cta-header
+  +font_h
+  font-size: 58px
+  line-height: 1.1
+  color: #979797
+  +mq(1599)
+    font-size: 52px
+  +mq(1439)
+    font-size: 48px
+  +mq(1365)
+    font-size: 43px
+  +mq(1199)
+    font-size: 39px
+  +mq(991)
+    font-size: 36px
+    margin-bottom: 10px
+    br
+      display: none
+  +mq(767)
+    font-size: 32px
+  +mq(639)
+    font-size: 30px
+  +mq(575)
+    font-size: 29px
+  +mq(479)
+    font-size: 27px
+  +mq(374)
+    font-size: 25px
+
+.tii-item
+  padding-left: 30px
+  +mq(1599)
+    padding-left: 24px
+  +mq(1365)
+    padding-left: 18px
+  +mq(1199)
+    padding-left: 15px
+    font-size: 14px
+  +mq(767)
+    // font-size: 13px
+    padding: 0 11px
+  +mq(639)
+    padding: 0 21px
+    flex: 0 0 50%
+    max-width: 50%
+    margin-bottom: 36px
+    &:nth-child(2)
+      order: 3
+    &:nth-child(3)
+      order: 2
+    &:nth-child(4)
+      order: 4
+  +mq(575)
+    padding: 0 17px
+  +mq(479)
+    padding: 0 11px
+  +mq(374)
+    padding: 0 10px
+    font-size: 13px
+    // font-size: 12px
+    margin-bottom: 29px
+
+.tii-item-icon
+  font-size: 53px
+  margin-bottom: 12px
+  +mq(1439)
+    font-size: 48px
+  +mq(1365)
+    font-size: 45px
+    margin-bottom: 10px
+  +mq(1199)
+    font-size: 41px
+    margin-bottom: 7px
+  +mq(767)
+    font-size: 37px
+    margin-bottom: 6px
+  +mq(374)
+    font-size: 35px
+
+.tii-item-header
+  +font_h
+  color: #888888
+  font-size: 20px
+  margin-bottom: 12px
+  +mq(1439)
+    font-size: 19px
+    margin-bottom: 9px
+  +mq(1199)
+    font-size: 17px
+  +mq(767)
+    font-size: 16px
+    margin-bottom: 7px
+  +mq(479)
+    font-size: 15px
+  +mq(374)
+    // font-size: 13px
+
+// compare table
+.tile-table
+  padding: 25px
+  background: #fdfdfd
+  border-radius: $brd_rs_md
+  box-shadow: $tile_shd
+  +mq(1365)
+    padding: 22px 20px
+  +mq(575)
+    padding: 22px 5px 22px 20px
+    box-shadow: 0 0 87px rgba(114, 114, 114, 0.34)
+  +mq(374)
+    box-shadow: 0 0 70px rgba(114, 114, 114, 0.34)
+
+.tile-table-column
+  padding: 0 25px
+  +mq(1599)
+    padding: 0 22px
+  +mq(1365)
+    padding: 0 18px
+  +mq(1199)
+    padding: 0 15px
+  +mq(991)
+    padding: 0 20px
+  +mq(575)
+    padding: 0 15px
+
+  &.tile-table-column-highlight
+    border-radius: $brd_rs_sm
+    padding: 0 32px
+    // transition: background-color 1s linear, box-shadow 1s ease-in
+    box-shadow: 0 0 117px rgba(114,114,114,.37)
+    +mq(1439)
+      padding: 0 29px
+    +mq(1199)
+      padding: 0 20px
+    +mq(991)
+      padding: 0 27px
+    +mq(575)
+      padding: 0 20px
+    +mq(374)
+      padding: 0 15px
+
+    &.animation-init
+      background-color: #fff
+      box-shadow: 0 0 117px rgba(114, 114, 114, 0.37)
+      +mq(479)
+        box-shadow: 0 0 70px rgba(114, 114, 114, 0.37)
+
+    > .tile-table-header
+      font-size: 20px
+      +mq(1439)
+        font-size: 19px
+      +mq(1365)
+        font-size: 18px
+      +mq(1199)
+        font-size: 17px
+      +mq(374)
+        font-size: 16px
+
+  &:first-child
+    padding-right: 45px
+    +mq(1599)
+      padding-right: 30px
+      padding-left: 10px
+    +mq(1439)
+      padding-left: 0
+      padding-right: 23px
+    +mq(1199)
+      padding-right: 17px
+    +mq(991)
+      padding-right: 37px
+    +mq(575)
+      padding-right: 20px
+    +mq(374)
+      padding-right: 15px
+  > div
+    +font_h
+    position: relative
+    font-size: 20px
+    line-height: 1.18
+    height: 54px
+    color: #9d9d9d
+    white-space: nowrap
+    +mq(1599)
+      font-size: 18px
+    +mq(1439)
+      font-size: 17px
+      height: 60px
+    +mq(1365)
+      font-size: 16px
+      height: 58px
+    +mq(1199)
+      font-size: 14px
+      height: 53px
+    +mq(991)
+      font-size: 16px
+    +mq(575)
+      font-size: 15px
+    +mq(374)
+      font-size: 14px
+
+    &:nth-child(odd)
+      color: #555
+
+  > .tile-table-header
+    display: flex
+    align-items: center
+    flex-direction: column
+    text-align: center
+    height: 160px
+    justify-content: flex-end
+    padding: 25px 0
+    font-size: 18px
+    color: #47475b
+    +mq(1439)
+      font-size: 17px
+    +mq(1365)
+      font-size: 14px
+      height: 153px
+    +mq(1199)
+      height: 147px
+    +mq(991)
+      font-size: 13px
+    +mq(374)
+      height: 142px
+
+.tth-icon
+  font-size: 35px
+  line-height: 1
+  margin-bottom: 18px
+  +mq(1439)
+    font-size: 33px
+  +mq(1199)
+    font-size: 30px
+  .icon
+    color: #d8cccb
+  .svg-inline-icon
+    width: 39px
+    height: 39px
+    +mq(1439)
+      width: 37px
+      height: 37px
+    +mq(1199)
+      width: 35px
+      height: 35px
+
+.tile-table-check
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: calc(50% - 4px)
+    left: 50%
+    width: 27px
+    height: 14px
+    border-left: 4px solid #b9c4e7
+    border-bottom: 4px solid #b9c4e7
+    transform: translate(-50%,-50%) rotate(-45deg)
+    +mq(1439)
+      width: 25px
+      height: 12px
+    +mq(1365)
+      width: 23px
+      height: 11px
+    +mq(374)
+      width: 21px
+      height: 10px
+
+    .tile-table-column-highlight &
+      border-color: #729dff
+
+.tile-table-column-inline-description
+  display: none
+  color: #989898 !important
+  margin-bottom: 2px
+  +mq(479)
+    display: block
+
+.tile-table-01
+  &.tile-table
+    padding: 0 0 0 20px
+    background-color: transparent
+    box-shadow: none
+    +mq(1199)
+      padding-left: 0
+    +mq(479)
+      padding-left: 6px
+      padding-right: 19px
+    +mq(374)
+      padding-left: 0
+      padding-right: 10px
+
+  .tile-table-column
+    text-align: center
+    +mq(479)
+      align-items: flex-start
+      width: auto
+      flex-grow: 0
+      text-align: left
+    > div
+      color: #666
+      +mq(479)
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: flex-start
+        
+    &:first-child
+      padding-left: 0
+      +mq(991)
+        text-align: center
+        border-radius: $brd_rs_sm
+        box-shadow: 0 0 117px rgba(114,114,114,.37)
+        padding: 0 38px
+      +mq(639)
+        padding: 0 31px
+      +mq(575)
+        padding: 0 22px
+      +mq(479)
+        display: none !important
+
+    &:nth-child(2), &:nth-child(3)
+      +mq(991)
+        padding: 0 10px
+        flex-basis: 0
+        flex-grow: 1
+        max-width: 100%
+      +mq(479)
+        padding-bottom: 24px
+
+    &:nth-child(2)
+      +mq(479)
+        flex-grow: 0
+        padding-right: 27px
+      +mq(374)
+        padding-right: 20px
+
+    // change order start
+    +mq(991)
+      &:nth-child(1)
+        order: 2
+      &:nth-child(2)
+        order: 1
+      &:nth-child(3)
+        order: 3
+    // change order end
+
+    & > .tile-table-header, &.tile-table-column-highlight > .tile-table-header,
+      +mq(991)
+        padding-top: 0
+        height: 120px
+        font-size: 17px
+      +mq(575)
+        font-size: 16px
+      +mq(479)
+        font-size: 17px
+        height: 110px
+        padding-bottom: 0
+      +mq(374)
+        font-size: 16px
+
+  .tile-table-column-description
+    text-align: left
+    > div
+      color: #999999
+      &:nth-child(odd)
+        +mq(991)
+          color: #555
+
+  .tile-table-column-highlight
+    +mq(991)
+      box-shadow: none
+    +mq(479)
+      box-shadow: 0 0 117px rgba(114,114,114,.37)
+      align-items: center
+    > div
+      color: #729dff
+      +mq(479)
+        align-items: center
+        font-size: 17px
+      +mq(374)
+        font-size: 16px
+    .tile-table-header
+      color: #333
+
+.tile-img-list-info-wrap
+  max-width: 1100px
+  margin-left: auto
+  margin-right: auto
+  margin-top: -100px
+  +mq(1365)
+    margin-top: -120px
+  +mq(991)
+    margin-top: 0
+  > div
+    margin-top: 100px
+    +mq(991)
+      margin-top: 0
+      margin-bottom: 105px
+    &:last-child
+      margin-bottom: 0
+
+  .tlii-header
+    +mq(374)
+      flex-wrap: wrap
+  
+
+.tile-list-img-info
+  font-weight: 300
+  font-size: 16px
+  user-select: none
+  text-decoration: none !important
+  padding: 0 50px 45px
+  color: #999999
+  border-radius: $brd_rs_md_res
+  border: 2px solid transparent
+  box-shadow: 0 0 9px rgba(114, 114, 114, 0.3)
+  transition: box-shadow 0.2s ease-in, background-color 0.2s ease-in, border 0.2s ease-in
+  +mq(1599)
+    padding: 0 34px 35px
+  +mq(1439)
+    padding: 0 29px 35px
+  +mq(1365)
+    font-size: 15px
+    padding: 0 25px 30px
+  +mq(1199)
+    padding: 0 19px 25px
+  +mq(991)
+    max-width: 510px
+    padding: 0 35px 30px
+    margin-left: auto
+    margin-right: auto
+  +mq(479)
+    padding: 0 30px 27px
+  +mq(413)
+    padding: 0 26px 27px
+  +mq(374)
+    padding: 0 23px 27px
+  &, > span
+    display: block
+  &:hover, &:focus
+    border-color: #b6d6e7
+    color: #999999
+    box-shadow: 0 0 80px rgba(114, 114, 114, 0.5)
+
+  .list-circle
+    margin-bottom: 26px
+    +mq(1365)
+      margin-bottom: 21px
+    +mq(1199)
+      margin-bottom: 17px
+
+.tlii-img
+  position: relative
+  height: 180px
+  margin-bottom: 27px
+  +mq(1599)
+    height: 160px
+  +mq(1439)
+    height: 150px
+  +mq(1199)
+    height: 120px
+  +mq(991)
+    height: 150px
+  +mq(575)
+    height: 135px
+  +mq(479)
+    height: 125px
+  +mq(374)
+    height: 110px
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 100%
+    left: 5%
+    right: 5%
+    height: 2px
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%);
+  img
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, 0)
+    max-height: 260px
+    width: auto
+    +mq(1599)
+      max-height: 240px
+    +mq(1439)
+      max-height: 220px
+    +mq(1365)
+      max-height: 195px
+    +mq(1199)
+      max-height: 170px
+    +mq(991)
+      max-height: 220px
+    +mq(575)
+      max-height: 200px
+    +mq(479)
+      max-height: 190px
+    +mq(374)
+      max-height: 170px
+
+.tlii-header
+  +font_h
+  font-size: 26px
+  line-height: 1.1
+  color: #47475b
+  margin-bottom: 10px
+  +mq(1599)
+    font-size: 24px
+  +mq(1439)
+    font-size: 23px
+  +mq(1365)
+    font-size: 22px
+  +mq(1199)
+    font-size: 20px
+  +mq(991)
+    font-size: 24px
+  +mq(374)
+    font-size: 20px
+
+.tlii-header-main
+  white-space: nowrap
+  span
+    +mq(1365)
+      display: none
+    +mq(991)
+      display: inline
+    +mq(479)
+      display: none
+
+.tlii-header-char
+  margin: 0 7px
+  +mq(1599)
+    margin: 0 5px
+
+.tlii-header-figure
+  color: #2b2a5d
+  span
+    &:nth-child(1)
+      color: #4f4fd1
+    &:nth-child(2)
+      padding-left: 0.07em
+      font-size: 0.71em
+      line-height: 1.2
+      color: #4f4fd1
+    &:nth-child(3)
+      padding-bottom: 0.1em
+      padding-left: 0.24em
+      font-size: 0.44em
+      color: #2b2a5d
+      line-height: 1
+      +mq(1199)
+        padding-bottom: 0.3em
+      +mq(991)
+        padding-bottom: 0.2em
+
+.tlii-text
+  margin-bottom: 12px
+  +mq(1199)
+    margin-bottom: 9px
+
+.tlii-cta-top
+  display: block
+  margin-bottom: 2px
+  color: #47475b
+  @media (min-width: 992px) and (max-width: 1365px), (max-width: 413px)
+    text-align: center
+
+.tlii-cta-main
+  align-items: center
+  @media(min-width: 992px) and (max-width: 1365px), (max-width: 413px)
+    flex-direction: column
+
+.tlii-cta-main-price
+  +font_h
+  color: #218fff
+  font-size: 30px
+  line-height: 1
+  +mq(1439)
+    font-size: 29px
+  +mq(1199)
+    font-size: 28px
+  +mq(991)
+    font-size: 29px
+  +mq(479)
+    font-size: 25px
+  > span
+    display: inline-block
+    vertical-align: middle
+  sup
+    font-size: 0.6em
+  sub
+    font-size: 0.5em
+    bottom: 0
+
+.tlii-cta-main-price-old
+  margin-left: 6px
+  font-size: 0.68em
+  position: relative
+  color: #999999
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: calc(50% + 1px)
+    left: 4px
+    right: -1px
+    height: 3px
+    background-color: #999999
+    opacity: 0.6
+    +mq(1439)
+      height: 2px
+
+.tlii-cta-main-link
+  +font_h
+  margin-left: auto
+  @media(min-width: 992px) and (max-width: 1365px), (max-width: 413px)
+    margin-left: 0
+    margin-top: 15px
+
+.tile-list-img-info:hover
+  .link-angle
+    color: #218fff
+
+// testimonials
+.testimonials-carousel
+  margin: 0 -30px -35px
+  +mq(639)
+    margin: 0 -15px 0
+
+.testimonials-preview-wrap
+  padding: 0 30px 35px
+  outline: none
+  +mq(639)
+    padding: 0 15px 35px
+
+.testimonials-preview-row
+  > div
+    +mq(639)
+      flex: 0 0 100%
+      max-width: 100%
+    &:first-child
+      margin-bottom: 35px
+      +mq(639)
+        margin-bottom: 54px
+      +mq(374)
+        margin-bottom: 45px
+  h2
+    br
+      +mq(639)
+        display: none
+
+.tpw-text
+  font-size: 30px
+  font-weight: 300
+  color: #f8f8f8
+  margin-bottom: 100px
+  +mq(1599)
+    font-size: 26px
+    margin-bottom: 85px
+  +mq(1439)
+    font-size: 24px
+    margin-bottom: 75px
+  +mq(1365)
+    font-size: 23px
+  +mq(1199)
+    font-size: 20px
+    margin-bottom: 52px
+  +mq(991)
+    font-size: 18px
+    margin-bottom: 42px
+  +mq(767)
+    font-size: 17px
+  +mq(479)
+    font-size: 15px
+    margin-bottom: 33px
+  +mq(374)
+    margin-bottom: 27px
+
+.tpw-author-rating
+  position: relative
+  padding-left: 175px
+  font-size: 22px
+  line-height: 1.33
+  color: #fff
+  text-transform: uppercase
+  +mq(1599)
+    font-size: 21px
+    padding-left: 165px
+  +mq(1439)
+    font-size: 20px
+    padding-left: 148px
+  +mq(1199)
+    font-size: 18px
+    padding-left: 125px
+  +mq(991)
+    font-size: 16px
+    padding-left: 110px
+  +mq(767)
+    font-size: 15px
+    padding-left: 96px
+  +mq(479)
+    font-size: 14px
+    padding-left: 88px
+  +mq(374)
+    font-size: 13px
+
+  p
+    margin-bottom: 5px
+    +mq(1439)
+      margin-bottom: 3px
+    &:last-child
+      margin-bottom: 0
+
+.tpw-rating
+  margin-bottom: 18px
+  +mq(1599)
+    margin-bottom: 14px
+  +mq(1439)
+    margin-bottom: 12px
+  +mq(1199)
+    margin-bottom: 7px
+  > span
+    margin-right: 7px
+    display: inline-block
+    font-size: 28px
+    line-height: 1
+    color: #fff15a
+    +mq(1599)
+      font-size: 26px
+    +mq(1439)
+      font-size: 24px
+    +mq(1199)
+      font-size: 21px
+    +mq(991)
+      font-size: 19px
+    +mq(767)
+      font-size: 18px
+    +mq(479)
+      font-size: 17px
+      margin-right: 5px
+    &.tpw-rating-half
+      width: 14px
+    &:last-child
+      margin-right: 0
+
+    .svg-inline-icon
+      color: #fff074
+      fill: #fff074
+      stroke: #fff074
+
+.tpw-author-img
+  position: absolute
+  top: 50%
+  left: 0
+  width: 130px
+  height: 130px
+  border-radius: 50%
+  background-size: cover
+  background-position: center
+  border: 3px solid #fff
+  box-shadow: 0 0 30px rgba(32, 82, 95, 0.71)
+  transform: translate(0,-50%)
+  +mq(1599)
+    width: 120px
+    height: 120px
+  +mq(1439)
+    width: 110px
+    height: 110px
+  +mq(1199)
+    width: 94px
+    height: 94px
+  +mq(991)
+    width: 85px
+    height: 85px
+  +mq(767)
+    width: 78px
+    height: 78px
+  +mq(479)
+    width: 72px
+    height: 72px
+
+.tpw-author-name
+  +font_h
+  margin-bottom: 0
+
+.tpw-author-additional
+  font-size: 0.91em
+  color: #c9c8c8
+
+.info-icon-wrap
+  max-width: 1300px
+  margin-left: auto
+  margin-right: auto
+  +mq(639)
+    max-width: 500px
+  +mq(374)
+    margin-top: 0
+
+.iiw-item
+  padding: 0 35px
+  text-align: center
+  font-weight: 300
+  +mq(1199)
+    padding: 0 20px
+  +mq(991)
+    padding: 0 15px
+  // +mq(767)
+  //   font-size: 14px
+
+  h5
+    @media (min-width: 640px) and (max-width: 767px)
+      font-size: 18px
+    +mq(479)
+      margin-bottom: 14px
+    br
+      +mq(374)
+        display: none
+
+.info-icon-wrap-01
+  &.info-icon-wrap
+    max-width: 1200px
+    +mq(1439)
+      max-width: 1100px
+    +mq(1199)
+      max-width: 900px
+  
+  .h5
+    @media (min-width: 768px) and (max-width: 991px)
+      font-size: 19px
+    @media (min-width: 640px) and (max-width: 767px)
+      font-size: 16px
+      margin-bottom: 12px
+    @media (min-width: 576px) and (max-width: 639px)
+      margin-bottom: 9px
+    br
+      display: none
+      @media (min-width: 576px) and (max-width: 639px)
+        display: inline
+
+  .iiw-desc
+    @media (min-width: 768px) and (max-width: 991px)
+      font-size: 15px
+      min-height: 85px
+    @media (min-width: 640px) and (max-width: 767px)
+      font-size: 13px
+      min-height: 70px
+    @media (min-width: 576px) and (max-width: 639px)
+      font-size: 12px
+      min-height: 60px
+    br
+      +mq(991)
+        display: none
+      +mq(575)
+        display: inline
+
+  > .row > div
+    +mq(575)
+      margin-bottom: 14px
+      &:last-child
+        margin-bottom: 0
+    +mq(374)
+      margin-bottom: 10px
+
+.info-icon-wrap-02
+  margin-bottom: 65px
+  +mq(1599)
+    margin-bottom: 60px
+  +mq(1439)
+    margin-bottom: 55px
+  +mq(374)
+    margin-bottom: 45px
+  &.info-icon-wrap
+    +mq(639)
+      margin-top: -30px
+    +mq(479)
+      margin-top: 75px
+      max-width: 330px
+  .iiw-item
+    +mq(639)
+      flex: 0 0 50%
+      max-width: 50%
+      margin-top: 65px
+      padding: 0 35px
+    +mq(575)
+      padding: 0 25px
+      margin-top: 58px
+    +mq(479)
+      flex: 0 0 100%
+      max-width: 100%
+      margin-top: 48px
+      padding: 0 24px
+      &:first-child
+        margin-top: 0
+    h5
+      br
+        +mq(479)
+          display: none
+
+a.iiw-item
+  display: block
+  text-decoration: none !important
+  padding-top: 17px
+  padding-bottom: 27px
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0)
+  background-color: transparent
+  border-radius: $brd_rs_sm
+  transition: box-shadow 0.25s ease-out, background-color 0.25s linear
+  +mq(991)
+    padding-top: 9px
+    padding-bottom: 15px
+  +mq(767)
+    padding: 3px 10px 12px
+  +mq(639)
+    padding: 2px 9px 10px
+  +mq(575)
+    padding: 3px 15px 15px
+    max-width: 300px
+    margin: 0 auto
+  +mq(374)
+    max-width: 230px
+  &:hover
+    background-color: #fff
+    box-shadow: 0 0 46px rgba(0, 0, 0, 0.35)
+  > span
+    display: block
+    color: #666666 !important
+    &.h5
+      color: #47475b !important
+
+.iiw-icon
+  font-size: 53px
+  margin-bottom: 17px
+  +mq(1439)
+    font-size: 50px
+    margin-bottom: 15px
+  +mq(1365)
+    font-size: 48px
+  +mq(1199)
+    font-size: 46px
+    margin-bottom: 12px
+  +mq(991)
+    font-size: 44px
+  +mq(767)
+    font-size: 41px
+    margin-bottom: 9px
+  +mq(479)
+    font-size: 37px
+    margin-bottom: 6px
+
+.iiw-img
+  text-align: center
+  transition: opacity 0.3s linear
+  img
+    height: 220px
+    width: auto
+    +mq(1439)
+      height: 210px
+    +mq(1199)
+      height: 175px
+    +mq(991)
+      height: 160px
+    +mq(767)
+      height: 150px
+    +mq(639)
+      height: 125px
+    +mq(575)
+      height: 150px
+    +mq(374)
+      height: 145px
+
+  a &
+    opacity: 0.54
+  a:hover &
+    opacity: 1
+
+// faqs
+
+.collapse-info-wrap
+  // background-color: #fcfcfc
+  padding: 27px 22px
+  +mq(1199)
+    // background-color: #f3f3f3
+  +mq(991)
+    padding: 22px 18px
+  +mq(767)
+    margin-top: 20px
+  +mq(575)
+    padding: 20px 0
+  +mq(374)
+    padding: 17px 0
+
+.ciw-item
+  background-color: #fff
+  border-radius: 6px
+  box-shadow: 0 2px 3px -1px rgba(0,0,0,.35)
+  margin-bottom: 22px
+  transition: box-shadow 0.15s ease-in-out
+  // +mq(991)
+  //   font-size: 14px
+  // +mq(575)
+  //   font-size: 13px
+  &:last-child
+    margin-bottom: 0
+  &.active, &:hover
+    box-shadow: 0 5px 12px -1px rgba(0,0,0,.27)
+
+.ciw-item-toggle
+  +font_h
+  display: block
+  user-select: none
+  cursor: pointer
+  padding: 19px 42px 19px 18px
+  position: relative
+  color: #333
+  transition: color 0.15s linear
+  +mq(575)
+    padding: 17px 42px 17px 16px
+  +mq(374)
+    padding: 15px 39px 15px 12px
+
+  
+  &:hover
+    color: #1c88d0
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 12px
+    height: 2px
+    top: calc(50% - 1px)
+    right: 15px
+    background-color: #333
+    line-height: 1
+    transform: translate(0,-50%)
+    transition: opacity 0.15s linear, background-color 0.15s linear
+  &:hover
+    &:before, &:after
+      background-color: #1c88d0
+  &:after
+    opacity: 1
+    transform: translate(0,-50%) rotate(90deg)
+    .active &
+      opacity: 0
+
+.ciw-item-info
+  font-weight: 300
+  display: none
+  padding: 18px
+  position: relative
+  p
+    opacity: 0
+    transition: opacity 0.25s linear
+    .active &
+      opacity: 1
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 1px
+    left: 0
+    top: 0
+    background-color: #e6e4e4
+
+.tile-img-info
+  position: relative
+  padding: 0 30px 70px
+  border-radius: 14px
+  border: 2px solid #d8d8d8
+  box-shadow: 0 0 9px rgba(114, 114, 114, 0.3)
+  height: 100%
+  +mq(1199)
+    padding: 0 24px 70px
+  +mq(991)
+    padding: 0 15px 65px
+  +mq(767)
+    padding: 0 30px 70px
+    max-width: 365px
+    margin: 0 auto
+  +mq(639)
+    max-width: 330px
+  +mq(374)
+    padding: 0 14px 70px
+
+  .tlii-header
+    font-size: 24px
+    margin-bottom: 17px
+    +mq(1199)
+      font-size: 23px
+    +mq(991)
+      font-size: 22px
+    +mq(767)
+      font-size: 24px
+
+  .tlii-header-figure span:nth-child(3)
+    padding-bottom: 0.2em
+    +mq(1199)
+      padding-bottom: 0.1em
+    +mq(991)
+      padding: 0.2em
+
+  .h6
+    font-size: 17px
+    +mq(991)
+      font-size: 15px
+    +mq(767)
+      font-size: 17px
+
+  .list-line-xs
+    @media (min-width: 768px) and (max-width: 991px)
+      font-size: 13px
+      
+
+.tile-img-info-link
+  user-select: none
+  cursor: pointer
+  transition: box-shadow 0.15s ease-in, background-color 0.15s ease-in, border 0.15s ease-in
+  &:hover, &.active
+    border-color: #218fff
+    box-shadow: 0 0 29px rgba(114, 114, 114, 0.3)
+
+  > span
+    display: block
+
+.timi-img
+  position: relative
+  height: 90px
+  margin-bottom: 14px
+  +mq(991)
+    height: 70px
+  +mq(767)
+    height: 90px
+
+  &::after
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 50%, rgba(0, 0, 0, 0) 100%)
+
+  img
+    position: absolute
+    left: 50%
+    bottom: 0
+    transform: translate(-50%, 0)
+    max-height: 135px
+    +mq(991)
+      max-height: 110px
+    +mq(767)
+      max-height: 135px
+
+.timi-price-description
+  margin-bottom: 6px
+  line-height: 1
+  font-weight: 300
+
+.timi-price, .timi-price-old
+  +font_h
+
+  sup
+    font-size: 0.6em
+  sub
+    font-size: 0.5em
+    bottom: 0
+
+.timi-price
+  color: #218fff
+  font-size: 25px
+  line-height: 1
+  +mq(991)
+    font-size: 22px
+  +mq(767)
+    font-size: 25px
+  +mq(374)
+    font-size: 21px
+
+.timi-price-old
+  font-size: 15px
+  position: relative
+  color: #999999
+  +mq(991)
+    font-size: 13px
+  +mq(767)
+    font-size: 15px
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 50%
+    left: 4px
+    right: -1px
+    height: 2px
+    background-color: #999999
+    opacity: 0.6
+
+.timi-cta
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  line-height: 45px
+  font-size: 16px
+  font-weight: 300
+  text-align: center
+  border-radius: 0 0 12px 12px
+  color: #333
+  background-color: #d8d8d8
+  transition: color 0.1s ease-in, background-color 0.1s ease-in
+  &::before
+    content: 'Click to select'
+    display: block
+  &::after
+    display: none
+    content: 'Selected'
+
+  .active.tile-img-info &
+    color: #fff
+    background-color: #218fff
+    &::before
+      display: none
+    &::after
+      display: block
+
+.block-footer-icon-info-wrap
+  margin-top: 50px
+  +mq(991)
+    margin-top: 33px
+  +mq(767)
+    margin-top: 10px
+  +mq(479)
+    margin-top: 7px
+
+.block-footer-icon-info
+  padding: 12px 18px 12px 14px
+  border: 1px solid #e7e7e7
+  border-radius: 12px
+  text-align: left
+  +mq(991)
+    padding: 9px 16px 9px 12px
+
+.bfii-icon
+  font-size: 55px
+  line-height: 1
+  margin-right: 5px
+  +mq(991)
+    font-size: 50px
+  +mq(479)
+    font-size: 45px
+
+.bfii-info
+  line-height: 1
+  font-size: 16px
+  +mq(991)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+
+.bfii-header
+  +font_h
+  color: #333
+  font-size: 19px
+  margin-bottom: 3px
+  text-transform: uppercase
+  +mq(991)
+    font-size: 18px
+  +mq(479)
+    font-size: 16px
+
+.slick-dots
+  position: absolute
+  top: 10px
+  left: -25px
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  width: 12px
+  +mq(1199)
+    left: -18px
+    top: 7px
+  +mq(991)
+    left: -12px
+  +mq(639)
+    position: relative
+    width: auto
+    left: auto
+    top: auto
+
+.slick-dots li
+  position: relative
+  display: inline-block
+  width: 12px
+  height: 12px
+  margin: 0 0 12px
+  padding: 0
+  cursor: pointer
+  +mq(991)
+    margin: 0 0 10px
+  +mq(639)
+    margin: 0 9px
+
+  button
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    font-size: 0
+    line-height: 0
+    padding: 0
+    cursor: pointer
+    color: transparent
+    border: 0
+    outline: none
+    border-radius: 50%
+    background: rgba(255,255,255,0.35)
+    transition: background 0.15s ease-in
+    &:hover
+      background: rgba(255,255,255,0.5)
+  &.slick-active button
+    background: rgba(255,255,255,0.9)
+
+.tile-info
+  font-size: 17px
+  max-width: 980px
+  margin: 0 auto
+  background-color: #fff
+  box-shadow: 0 0 117px rgba(114, 114, 114, 0.34);
+  border-radius: 15px
+  padding: 60px 70px
+  +mq(1199)
+    padding: 50px 60px
+  +mq(991)
+    padding: 40px 50px
+    font-size: 16px
+  +mq(575)
+    padding: 30px
+    font-size: 15px
+  +mq(374)
+    padding: 24px
+    
+
+.ti-header-col
+  padding-right: 30px
+  +mq(991)
+    padding-right: 20px
+  +mq(767)
+    padding-right: 15px
+    margin-bottom: 20px
+
+.ti-header
+  margin-top: -4px
+  margin-bottom: 8px
+  +mq(991)
+    margin-top: -2px
+    margin-bottom: 4px
+  
+.ti-sub-header
+  color: #a2a2a2
+  +mq(991)
+    font-size: 15px
+
+.ti-content
+  strong
+    color: #333
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+

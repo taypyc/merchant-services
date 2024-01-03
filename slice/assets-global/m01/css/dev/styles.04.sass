@@ -1,0 +1,135 @@
+#header
+  background-color: #223472
+
+.hbc-highlighted
+  color: #368df1
+
+.form-control, .select2-container--default .select2-selection--single
+  background-color: #ddeaf8
+  border: 2px solid #ddeaf8
+
+.form-control,
+.select2-container--default .select2-selection--single .select2-selection__rendered
+  color: #2284f1
+
+.form-control:focus,
+.select2-container--open.select2-container--default .select2-selection--single,
+.select2-container--focus.select2-container--default .select2-selection--single
+  border-color: #00aeef
+  background-color: #fdfdfd
+  box-shadow: none
+  color: #2284f1
+
+.text-color-01
+  color: #368df1
+  font-weight: bold
+
+.hbc-old
+  color: #79819d
+  &::after
+    background-color: rgba(121,129,157,0.8)
+
+.btn
+  background-color: #0f7ef5
+  background-image: none
+  transition: color .15s ease-in-out, background-color .15s ease-in-out
+  &:hover, .fa-step-item &:hover, &[disabled]
+    background-color: #223472
+    box-shadow: 0 4px 17px rgba(0,0,0,0.5)
+
+  .fa-step-item &
+    box-shadow: 0 4px 17px rgba(0,0,0,0.5)
+
+.hb-cart-service-list 
+  &::before
+    border-bottom: 10px solid #2f3fab
+
+  ul
+    background-color: #2f3fab
+
+    li:not(:last-child)::after
+      background-color: #3752a9
+
+.hb-cart-service-selected:hover, .hb-cart-service-selected.active
+  background-color: #2f3fab
+
+.form-control::-webkit-input-placeholder
+  color: #abafbd
+
+.form-control:-ms-input-placeholder
+  color: #abafbd
+
+.form-control::-moz-placeholder
+  color: #abafbd
+
+.form-control::placeholder
+  color: #abafbd
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+  color: #abafbd
+
+.loading-description
+  color: #0e1756
+
+.loader-elem
+  position: relative
+  z-index: 2
+  margin-bottom: 17px
+
+.loader-elem-logo
+  img
+    height: 65px
+    width: auto
+
+.loader-elem-disc
+  top: 0
+  left: -5px
+  width: 2px
+  height: 65px
+
+.led-processing
+  position: absolute
+  width: 2px
+  height: 50%
+  top: 50%
+  border-radius: 2px
+  animation: led-processing 1.5s ease-in-out infinite
+
+@keyframes led-processing
+  0% 
+    top: 0%
+    opacity: 1
+    transform: translate(0,0) scaleY(1.1)
+    background-color: #cc3301
+
+  25%
+    opacity: 1
+    transform: translate(0,0) scaleY(1)
+    background-color: #2a389a
+    
+
+  50%
+    top: 50%
+    opacity: 1
+    transform: translate(0,0) scaleY(1.1)
+    background-color: #cc3301
+
+  75%
+    opacity: 1
+    transform: translate(0,0) scaleY(1)
+    background-color: #2a389a
+
+
+  100% 
+    top: 0%
+    opacity: 1
+    transform: translate(0,0) scaleY(1.1)
+    background-color: #cc3301
+
+.filebox-progress figure, .filebox, .filebox-progress
+  color: #2a389a
+
+.filebox:not(.filebox-success), .filebox-progress
+  border: 2px dashed #2a389a
+
+

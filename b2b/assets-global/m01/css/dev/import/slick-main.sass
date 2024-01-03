@@ -1,0 +1,100 @@
+/* Slider */
+.slick-loading .slick-list
+  background: #fff url('../img/main/ajax-loader.gif') center center no-repeat
+
+/* Arrows */
+.slick-prev,
+.slick-next
+  font-size: 0
+  line-height: 0
+  position: absolute
+  top: 50%
+  display: block
+  padding: 0
+  transform: translate(0, -50%) scale(.75)
+  cursor: pointer
+  color: transparent
+  border: none
+  outline: none
+  background: transparent
+  width: 25px
+  height: 40px
+  background: url(../img/main/sprite.svg)
+  +mq(1600)
+    transform: translate(0, -50%) scale(1)
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+  color: transparent
+  outline: none
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+  opacity: .6
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled
+  opacity: .25
+
+.slick-prev
+  left: -25px
+  background-position: -90px -2px
+  +mq(1600)
+    left: -90px
+
+.slick-next
+  right: -25px
+  background-position: -115px -2px
+  +mq(1600)
+    right: -90px
+
+/* Dots */
+.slick-dotted.slick-slider
+  margin-bottom: 30px
+
+.slick-dots
+  position: absolute
+  bottom: -25px
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  li
+    position: relative
+    display: inline-block
+    margin: 0 5px
+    padding: 0
+    cursor: pointer
+    &.slick-active
+      button
+        opacity: .5
+    button
+      font-size: 0
+      line-height: 0
+      display: block
+      width: 15px
+      height: 15px
+      padding: 0
+      cursor: pointer
+      color: transparent
+      border: 0
+      outline: none
+      background: #BABABA
+      border-radius: 50%
+      transition: opacity .5s ease-in-out
+      &:hover
+        opacity: .5
+      &:hover,
+      &:focus
+        outline: none
+
+.slick-dots li.slick-active button:before
+  opacity: .75
+  color: black
+

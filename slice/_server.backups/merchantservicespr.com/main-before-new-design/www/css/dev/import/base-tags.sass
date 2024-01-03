@@ -1,0 +1,281 @@
+@font-face
+  font-family: 'PT Serif'
+  src: url('fonts/PTSerif-Regular.woff2') format('woff2'), url('fonts/PTSerif-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'PT Serif'
+  src: url('fonts/PTSerif-Bold.woff2') format('woff2'), url('fonts/PTSerif-Bold.woff') format('woff')
+  font-weight: bold
+  font-style: normal
+
+@font-face
+  font-family: 'Open Sans'
+  src: url('fonts/OpenSans-Regular.woff2') format('woff2'), url('fonts/OpenSans-Regular.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+@font-face
+  font-family: 'Open Sans'
+  src: url('fonts/OpenSans-SemiBold.woff2') format('woff2'), url('fonts/OpenSans-SemiBold.woff') format('woff')
+  font-weight: 600
+  font-style: normal
+
+
+html
+  direction: ltr
+
+body
+  color: #000
+  font-family: $font_r
+  font-weight: normal
+  font-size: 18px
+  line-height: 1.4
+  margin: 0 auto
+  min-width: 320px
+  max-width: 1920px
+  +mq(1199)
+    font-size: 17px
+  +mq(991)
+    font-size: 16px
+  +mq(767)
+    font-size: 15px
+  +mq(479)
+    font-size: 15px
+
+  +mq(991)
+    & > .body
+      overflow-x: hidden
+      overflow-y: auto
+      position: relative
+
+h1, h2, h3, h4, h5, h6, .h5
+  font-family: $font_h
+  font-weight: normal
+  color: #22214b
+  line-height: 1.14
+  letter-spacing: -0.025em
+  .text-color-light &
+    color: #fff
+  &:last-child
+    margin-bottom: 0
+
+h1
+  font-size: 67px
+  margin-bottom: 65px
+  +mq(1679)
+    margin-bottom: 55px
+  +mq(1599)
+    margin-bottom: 50px
+  +mq(1439)
+    font-size: 63px
+    margin-bottom: 41px
+  +mq(1365)
+    font-size: 60px
+  +mq(1199)
+    font-size: 57px
+  +mq(991)
+    font-size: 52px
+    margin-bottom: 36px
+  +mq(767)
+    font-size: 49px
+  +mq(575)
+    font-size: 45px
+    margin-bottom: 31px
+  +mq(479)
+    font-size: 41px
+  +mq(374)
+    font-size: 36px
+    margin-bottom: 27px
+  &.header-lg
+    font-size: 86px
+    +mq(1679)
+      font-size: 78px
+    +mq(1599)
+      font-size: 71px
+    +mq(1439)
+      font-size: 67px
+    +mq(1199)
+      font-size: 64px
+    +mq(991)
+      font-size: 58px
+    +mq(767)
+      font-size: 55px
+    +mq(639)
+      font-size: 52px
+    +mq(575)
+      font-size: 47px
+    +mq(479)
+      font-size: 39px
+    +mq(374)
+      font-size: 31px
+
+h2
+  font-size: 56px
+  margin-bottom: 20px
+  +mq(1439)
+    font-size: 55px
+  +mq(1365)
+    font-size: 54px
+  +mq(1199)
+    font-size: 50px
+  +mq(991)
+    font-size: 48px
+  +mq(767)
+    font-size: 47px
+  +mq(639)
+    font-size: 42px
+    margin-bottom: 16px
+  +mq(575)
+    font-size: 38px
+    margin-bottom: 14px
+  +mq(479)
+    font-size: 34px
+  +mq(374)
+    font-size: 31px
+
+h3
+  font-size: 46px
+  margin-bottom: 20px
+  +mq(1439)
+    font-size: 44px
+  +mq(1365)
+    font-size: 41px
+    margin-bottom: 15px
+  +mq(1199)
+    font-size: 37px
+    margin-bottom: 11px
+  +mq(991)
+    font-size: 32px
+    margin-bottom: 9px
+  +mq(575)
+    font-size: 29px
+  +mq(479)
+    font-size: 27px
+  +mq(374)
+    font-size: 25px
+
+h4
+  font-family: $font_r
+  font-size: 38px
+  margin-bottom: 20px
+  +mq(1439)
+    font-size: 35px
+    margin-bottom: 15px
+  +mq(1365)
+    font-size: 32px
+    margin-bottom: 12px
+  +mq(1199)
+    font-size: 30px
+    margin-bottom: 9px
+  +mq(991)
+    font-size: 27px
+    margin-bottom: 7px
+  +mq(575)
+    font-size: 26px
+  +mq(479)
+    font-size: 24px
+  +mq(374)
+    font-size: 21px
+
+h5, .h5
+  font-family: $font_r
+  font-size: 34px
+  margin-bottom: 27px
+  +mq(1599)
+    font-size: 33px
+  +mq(1439)
+    font-size: 32px
+    margin-bottom: 24px
+  +mq(1365)
+    font-size: 31px
+    margin-bottom: 21px
+  +mq(1199)
+    font-size: 30px
+  +mq(991)
+    font-size: 28px
+    margin-bottom: 17px
+  +mq(767)
+    font-size: 27px
+    margin-bottom: 15px
+  +mq(639)
+    font-size: 26px
+  +mq(575)
+    font-size: 25px
+  +mq(479)
+    font-size: 23px
+    margin-bottom: 14px
+  +mq(374)
+    font-size: 21px
+    margin-bottom: 12px
+
+h6
+  font-size: 16px
+  margin-bottom: 20px
+
+p
+  margin: 0 0 20px
+
+a
+  outline: none !important
+  color: #888
+
+  &:hover, &:focus
+    color: #CCC
+
+  &[href^=tel], &[href^=mailto]
+    pointer-events: none
+
+    .mt-device &
+      pointer-events: auto
+
+    +mq(1199)
+      pointer-events: auto
+
+ul
+  margin: 0 0 20px
+  padding: 0
+  list-style-type: none
+
+img
+  max-width: 100%
+
+textarea
+  resize: none
+
+select
+  outline: none
+
+p:last-child,
+ul:last-child,
+li:last-child,
+.form-group:last-child
+  margin-bottom: 0
+
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  -webkit-appearance: none
+
+section
+  padding: 127px 0
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  +mq(1599)
+    padding: 120px 0
+  +mq(1439)
+    padding: 110px 0
+  +mq(1365)
+    padding: 100px 0
+  +mq(1199)
+    padding: 90px 0
+  +mq(991)
+    padding: 85px 0
+  +mq(767)
+    padding: 80px 0
+  +mq(575)
+    padding: 70px 0
+  +mq(479)
+    padding: 62px 0
+  +mq(374)
+    padding: 57px 0

@@ -1,0 +1,578 @@
+@import "import/vars.sass"
+@import "import/base-tags.sass"
+@import "import/base-styles.sass"
+@import "import/static.sass"
+@import "import/icons.sass"
+
+@media (min-width: 576px)
+  .container 
+    max-width: 100%
+
+@media (min-width: 768px)
+  .container 
+    max-width: 750px
+
+@media (min-width: 992px)
+  .container 
+    max-width: 970px
+
+@media (min-width: 1200px)
+  .container 
+    max-width: 1170px
+
+@media(min-width: 1366px)
+  .container
+    max-width: 1330px
+
+@media(min-width: 1440px)
+  .container
+    max-width: 1410px
+
+@media(min-width: 1600px)
+  .container
+    max-width: 1520px
+
+.form-application, .afw-steps-progress
+  max-width: 1100px
+  margin: 0 auto
+
+.application-form-wrap
+  margin-left: -18px
+  margin-right: -18px
+  +mq(767)
+    margin-left: -15px
+    margin-right: -15px
+
+.fa-step-item
+  padding: 0 18px 25px
+  visibility: hidden
+  +mq(767)
+    padding: 0 33px 25px
+  +mq(374)
+    padding: 0 17px 25px
+  .form-application-initialized &
+    visibility: visible
+
+.fa-step-item
+  outline: none
+  user-select: text
+
+.fa-step-header
+  img
+    width: 120px
+    +mq(991)
+      width: 110px
+    +mq(767)
+      width: 100px
+    +mq(639)
+      width: 90px
+    +mq(479)
+      width: 85px
+    +mq(413)
+      width: 80px
+    +mq(374)
+      width: 75px
+
+.fsh-additional-info
+  +mq(639)
+    padding: 0
+
+.iil-icon
+  font-size: 42px
+  line-height: 1
+  +mq(639)
+    font-size: 38px
+  +mq(479)
+    font-size: 35px
+  +mq(374)
+    font-size: 33px
+
+.iil-description
+  +font_h
+  font-size: 16px
+  color: #000
+  line-height: 1.2
+  +mq(639)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+  +mq(374)
+    font-size: 12px
+
+.iil-description-01
+  +font_h
+  font-size: 16px
+  color: #00ace1
+  line-height: 1.05
+  +mq(575)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+  +mq(374)
+    font-size: 13px
+  > span
+    display: none
+  #calc-annual-savings-d1
+    display: inline-block
+
+.iil-highlighted
+  font-size: 34px
+  color: #00ace1
+  +mq(639)
+    font-size: 31px
+  +mq(575)
+    font-size: 29px
+  +mq(479)
+    font-size: 27px
+  +mq(374)
+    font-size: 24px
+
+.iil-additional
+  font-size: 24px
+  line-height: 1.1
+  color: #666666
+  font-weight: 300
+  +mq(1199)
+    font-size: 23px
+    width: 100%
+    text-align: center
+    margin-top: 18px
+  +mq(991)
+    font-size: 21px
+  +mq(767)
+    font-size: 20px
+  +mq(639)
+    font-size: 19px
+  +mq(575)
+    font-size: 18px
+  +mq(479)
+    font-size: 15px
+  +mq(413)
+    font-size: 14px
+
+.icon-info-line
+  .iil-icon
+    padding-right: 7px
+  .iil-description
+    padding-right: 15px
+  .iil-description-01
+    padding-right: 5px
+  .iil-highlighted
+    padding-right: 34px
+    +mq(1199)
+      padding-right: 0
+
+.tile-info-divided
+  max-width: 930px
+  margin-left: auto
+  margin-right: auto
+  background-color: rgba(232, 231, 231, 0.55)
+  box-shadow: 0 0 32px rgba(122, 122, 122, 0.53)
+  border-radius: 12px
+
+  +mq(767)
+    margin-left: -15px
+    margin-right: -15px
+  +mq(575)
+    margin-left: -22px
+    margin-right: -22px
+  +mq(479)
+    margin-left: -10px
+    margin-right: -10px
+    min-height: 145px
+  +mq(374)
+    margin-left: -3px
+    margin-right: -3px
+
+  > .tid-item.active:first-child .tid-item-arrows
+    border-top-left-radius: 12px
+    border-bottom-left-radius: 12px
+
+  > [class*="col-"]
+    padding: 30px 35px
+    +mq(991)
+      padding: 27px 30px
+    +mq(767)
+      padding: 23px 23px
+    +mq(639)
+      padding: 17px
+    +mq(575)
+      padding: 15px
+    +mq(479)
+      padding: 20px
+    +mq(374)
+      padding: 16px
+
+.tid-item
+  color: #666666
+  font-size: 16px
+  line-height: 1.25
+  font-weight: 300
+  position: relative
+  +mq(767)
+    font-size: 14px
+  +mq(639)
+    font-size: 13px
+  +mq(575)
+    font-size: 12px
+  h6
+    color: #333
+    +mq(767)
+      font-size: 16px
+    +mq(639)
+      font-size: 15px
+      margin-bottom: 7px
+    +mq(575)
+      font-size: 13px
+  p
+    margin-bottom: 17px
+    +mq(767)
+      margin-bottom: 12px
+    +mq(639)
+      margin-bottom: 10px
+    +mq(575)
+      margin-bottom: 7px
+    &:last-child
+      margin-bottom: 0
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    top: 35px
+    bottom: 35px
+    width: 2px
+    left: calc(100% - 1px)
+    background-color: rgba(232, 231, 231, 0.7)
+.tid-item.active
+  color: rgba(255,255,255,0.73)
+  +mq(479)
+    flex-basis: 0
+    flex-grow: 1
+    width: auto
+    max-width: 100%
+  h6
+    color: #fff
+    +mq(479)
+      font-size: 14px
+  &::before
+    display: none
+
+.tid-item
+  &:not(.active) 
+    +mq(479)
+      padding: 0 !important
+      flex-basis: 0
+      flex-grow: 0
+      max-width: none
+      flex: 0
+    .tid-item-content
+      +mq(479)
+        position: relative
+        height: 100%
+        width: 75px
+      +mq(413)
+        width: 70px
+      +mq(374)
+        width: 66px
+      p
+        +mq(479)
+          display: none
+      h6
+        +mq(479)
+          position: absolute
+          top: 50%
+          left: 50%
+          width: 120px
+          text-align: center
+          margin-bottom: 0
+          transform-origin: 50% 50%
+          transform: translate(-50%, -50%) rotate(-90deg) 
+          letter-spacing: 0.03em
+
+.tid-item-content
+  position: relative
+
+.tid-item-arrows
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #649be6
+
+  &::before, &::after
+    content: ''
+    position: absolute
+    display: block
+    width: 0
+    height: 0
+
+  &::before
+    top: 27px
+    left: 100%
+    border-top: 14px solid transparent
+    border-bottom: 14px solid transparent
+    border-left: 14px solid #649be6
+    +mq(991)
+      top: 23px
+    +mq(767)
+      top: 21px
+      border-width: 12px
+    +mq(639)
+      top: 15px
+      border-width: 9px
+    +mq(575)
+      top: 14px
+      border-width: 7px
+    +mq(479)
+      top: 50%
+      margin-top: -9px
+
+  &::after
+    top: 100%
+    left: 35px
+    border-left: 38px solid transparent
+    border-right: 38px solid transparent
+    border-top: 38px solid #649be6
+    +mq(767)
+      border-width: 33px
+    +mq(639)
+      left: 50%
+      margin-left: -37px
+    +mq(479)
+      border-width: 27px
+      margin-left: -30px
+//
+.block-footer-icon-info-wrap
+  margin-top: 50px
+  +mq(991)
+    margin-top: 33px
+  +mq(767)
+    margin-top: 10px
+  +mq(479)
+    margin-top: 7px
+
+.block-footer-icon-info
+  padding: 12px 18px 12px 14px
+  border: 1px solid #e7e7e7
+  border-radius: 12px
+  text-align: left
+  +mq(991)
+    padding: 9px 16px 9px 12px
+
+.bfii-icon
+  font-size: 55px
+  line-height: 1
+  margin-right: 5px
+  +mq(991)
+    font-size: 50px
+  +mq(479)
+    font-size: 45px
+
+.bfii-info
+  line-height: 1
+  font-size: 16px
+  +mq(991)
+    font-size: 15px
+  +mq(479)
+    font-size: 14px
+
+.bfii-header
+  +font_h
+  color: #333
+  font-size: 19px
+  margin-bottom: 3px
+  text-transform: uppercase
+  +mq(991)
+    font-size: 18px
+  +mq(479)
+    font-size: 16px
+
+.slick-dots
+  position: absolute
+  top: 10px
+  left: -25px
+  display: block
+  width: 100%
+  padding: 0
+  margin: 0
+  list-style: none
+  text-align: center
+  width: 12px
+  +mq(1199)
+    left: -18px
+    top: 7px
+  +mq(991)
+    left: -12px
+  +mq(639)
+    position: relative
+    width: auto
+    left: auto
+    top: auto
+
+.slick-dots li
+  position: relative
+  display: inline-block
+  width: 12px
+  height: 12px
+  margin: 0 0 12px
+  padding: 0
+  cursor: pointer
+  +mq(991)
+    margin: 0 0 10px
+  +mq(639)
+    margin: 0 9px
+
+  button
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    font-size: 0
+    line-height: 0
+    padding: 0
+    cursor: pointer
+    color: transparent
+    border: 0
+    outline: none
+    border-radius: 50%
+    background: rgba(255,255,255,0.35)
+    transition: background 0.15s ease-in
+    &:hover
+      background: rgba(255,255,255,0.5)
+  &.slick-active button
+    background: rgba(255,255,255,0.9)
+
+.section-signup-steps
+  padding-top: 0
+  overflow: hidden
+
+.afw-steps-progress
+  position: relative
+  padding: 20px 18px 0
+  margin-bottom: 45px
+  user-select: none
+  +mq(991)
+    padding: 12px 18px 0
+  +mq(767)
+    padding: 12px 15px 0
+    margin-bottom: 38px
+  +mq(639)
+    margin-bottom: 33px
+  +mq(479)
+    margin-bottom: 30px
+    padding-top: 10px
+  +mq(413)
+    margin-bottom: 25px
+  +mq(374)
+    padding-left: 6px
+    padding-right: 6px
+
+  &:before
+    content: ''
+    position: absolute
+    z-index: 1
+    top: 0
+    bottom: 0
+    left: -1920px
+    right: -1920px
+    background-color: #efefef
+
+  > *
+    position: relative
+    z-index: 2
+
+.asp-item
+  padding: 20px 30px
+  position: relative
+  color: #ccc
+  white-space: nowrap
+  +mq(991)
+    padding: 17px 27px
+  +mq(639)
+    padding: 15px 23px
+  +mq(575)
+    padding: 12px 15px
+    font-size: 14px
+  +mq(479)
+    padding: 9px 13px
+    font-size: 12px
+  +mq(413)
+    padding: 8px 10px 
+    font-size: 11px
+  +mq(374)
+    padding: 6px 9px
+    font-size: 10px
+  &::before
+    content: ''
+    display: none
+    width: 14px
+    height: 8px
+    border-left: 2px solid #6f9f4a
+    border-bottom: 2px solid #6f9f4a
+    transform: translate(-5px,-4px) rotate(-45deg)
+    +mq(575)
+      width: 11px
+      height: 6px
+      transform: translate(-4px,-4px) rotate(-45deg)
+    +mq(413)
+      width: 9px
+      height: 5px
+      transform: translate(-3px,-3px) rotate(-45deg)
+    +mq(374)
+      width: 7px
+      height: 4px
+
+  &.active
+    background: #fff
+    color: #333
+  &.completed
+    background: transparent
+    color: #6f9f4a
+    &::before
+      display: inline-block
+  &.active-completed
+    background: #fff
+
+.checkmark-circle
+  display: inline-block
+  width: 50px
+  height: 50px
+  border: 3px solid #039403
+  border-radius: 50%
+  position: relative
+  &::before
+    content: ''
+    display: block
+    width: 23px
+    height: 12px
+    position: absolute
+    top: calc(50% - 1px)
+    left: 50%
+    border-left: 3px solid
+    border-bottom: 3px solid
+    border-color: #039403
+    transform: translate(-50%, -50%) rotate(-45deg)
+
+.hero-img-circle
+  width: 300px
+  height: 300px
+  border-radius: 50%
+  margin-left: auto
+  margin-right: auto
+  box-shadow: 0 0 4px rgba(0,0,0,0.5)
+  background-size: cover
+  background-position: center
+  background-image: url(../img/thx-hero.jpg)
+  +mq(639)
+    width: 250px
+    height: 250px
+  +mq(479)
+    width: 240px
+    height: 240px
+    
+
+
+

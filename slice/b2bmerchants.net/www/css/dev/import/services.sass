@@ -1,0 +1,169 @@
+.page-hero-text-container
+  height: 500px
+  position: relative
+  +mq(575)
+    height: 300px
+
+  > *
+    position: relative
+    z-index: 2
+
+  &::before
+    content: ''
+    position: absolute
+    z-index: 1
+    width: 350px
+    height: 350px
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+
+  h1
+    font-size: 5rem
+    margin-bottom: 0
+    +mq(1023)
+      font-size: 4rem
+    +mq(767)
+      font-size: 3rem
+    +mq(575)
+      font-size: 2rem
+
+.phtc-01
+  &::before
+    width: 670px
+    height: 622px
+    background: url(../img/payment-services.svg) no-repeat
+    +mq(575)
+      height: 100%
+      width: 100%
+      background-size: 60%
+      background-position: left center
+.phtc-02
+  &::before
+    background: rgb(66,120,253)
+    background: linear-gradient(90deg, rgba(66,120,253,1) 0%, rgba(25,227,224,1) 100%)
+
+.phtc-04
+  &::before
+    width: 670px
+    height: 622px
+    background: url(../img/services.svg) no-repeat
+    background-size: cover
+    +mq(575)
+      height: 100%
+      width: 100%
+      background-size: 60%
+      background-position: left center
+
+.list-bullet-xl
+  li
+    padding-left: 80px
+    position: relative
+    +mq(1199)
+      padding-left: 70px
+    +mq(1023)
+      padding-left: 50px
+    +mq(767)
+      padding-left: 45px
+    +mq(374)
+      padding-left: 37px
+    &:not(:last-child)
+      margin-bottom: 60px
+    ::before
+      content: ''
+      display: block
+      position: absolute
+      top: -2px
+      left: 0
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #ccc
+      +mq(1199)
+        width: 45px
+        height: 45px
+      +mq(1023)
+        top: 2px
+        width: 35px
+        height: 35px
+      +mq(767)
+        top: 4px
+        width: 30px
+        height: 30px
+      +mq(575)
+        top: 2px
+      +mq(479)
+        top: 1px
+      +mq(374)
+        top: 0
+        width: 25px
+        height: 25px
+
+.other-devices-xs
+  max-width: 900px
+  margin: 0 auto
+
+.h2-01
+  +mq(1199)
+    font-size: 38px
+  +mq(1023)
+    font-size: 31px
+  +mq(767)
+    font-size: 27px
+  +mq(639)
+    font-size: 25px
+  +mq(413)
+    font-size: 21px
+  +mq(374)
+    font-size: 19px
+  br
+    +mq(1199)
+      display: none
+
+
+.other-devices__item-link
+  h4
+    +mq(1023)
+      font-size: 27px
+    +mq(413)
+      font-size: 23px
+
+.section-hero.sh-01
+  &::after
+    display: none
+  .sh-item-img-main::before
+    background-image: url(../img/bg-merchant-analytics.png)
+
+.payment-services-block
+  padding: 45px 0
+  margin-bottom: 140px
+  line-height: 1.6
+  +mq(767)
+    margin-bottom: 30px
+
+.margin0
+  margin: 0
+
+@media (min-width: 992px)
+  .payment-services-row
+    img
+      position: relative
+      z-index: 1
+
+  .payment-services-figure-1,
+  .payment-services-figure-2
+    position: relative
+    &::before
+      content: ''
+      width: 373px
+      height: 710px
+      bottom: 10%
+      right: 25%
+      background: url(../img/payment-services-figure-1.png) no-repeat
+      position: absolute
+
+  .payment-services-figure-2
+    &::before
+      width: 395px
+      height: 704px
+      background: url(../img/payment-services-figure-2.png) no-repeat

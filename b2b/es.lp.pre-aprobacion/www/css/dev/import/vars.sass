@@ -1,0 +1,13 @@
+$font_r: 'Lato', sans-serif
+$tile_shd: 0 0 117px rgba(114, 114, 114, 0.34)
+$brd_rs_md: 27px
+$brd_rs_md_res: 20px
+$brd_rs_sm: 15px
+$brd_rs_sm_res: 11px
+
+@mixin font_h($fw:900)
+  font-family: 'Lato', sans-serif
+  font-weight: $fw
+
+@mixin mq($width)
+  @media (max-width: $width + 'px') { @content; }

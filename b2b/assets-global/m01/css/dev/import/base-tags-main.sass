@@ -1,0 +1,161 @@
+html
+  direction: ltr
+
+body
+  color: $color_grey
+  font-family: $font_open_sans
+  font-weight: 400
+  font-size: 14px
+  line-height: 1.4
+  margin: 0 auto
+  overflow-x: hidden
+  overflow-y: auto
+  +mq()
+    font-size: 16px
+
+h1, h2, h3, h4, h5, h6
+  +font_poppins
+  color: $color_main
+  margin-bottom: 30px
+
+h1
+  font-size: 30px
+  +mq()
+    font-size: 65px
+
+h2
+  font-size: 28px
+  +mq()
+    font-size: 60px
+
+h3
+  font-size: 26px
+  +mq()
+    font-size: 55px
+
+h4
+  font-size: 24px
+  +mq()
+    font-size: 50px
+
+h5
+  font-size: 22px
+  +mq()
+    font-size: 45px
+
+h6
+  font-size: 20px
+  +mq()
+    font-size: 35px
+
+p
+  margin: 0 0 20px
+
+a
+  outline: none
+  color: #888
+
+  &:hover, &:focus
+    color: #CCC
+
+ul
+  margin: 0 0 20px
+  padding: 0
+  list-style-type: none
+
+img
+  max-width: 100%
+  height: auto
+
+iframe
+  max-width: 100%
+  width: 100%
+  display: block
+
+textarea
+  resize: none
+
+select
+  outline: none
+
+table
+  width: 100%
+
+p:last-child,
+ul:last-child,
+li:last-child,
+.form-group:last-child
+  margin-bottom: 0
+
+input[type="text"], input[type="email"], input[type="tel"], textarea
+  &,
+  &:focus
+    -webkit-appearance: none
+    border: none
+    height: 50px
+    width: 100%
+    padding: 0 22px
+    background: #F6F9FC
+    box-shadow: 0 0 23px rgba(244, 244, 244, 0.8)
+    border-radius: 20px
+    font-size: 16px
+    color: $color_grey
+    outline: none
+    &::-webkit-input-placeholder
+      color: $color_grey
+    &::placeholder
+      color: $color_grey
+
+  &.error
+    border: 1px solid #c10000
+
+button[type="submit"],
+input[type="submit"]
+  background: $color_light_green
+  box-shadow: 0 0 19px rgba(0, 0, 0, 0.07)
+  border-radius: 50px
+  height: 60px
+  font-weight: 700
+  font-size: 25px
+  text-align: center
+  color: $color_main
+  text-transform: uppercase
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.08)
+  outline: none
+  width: 100%
+  border: none
+  transition: all .5s ease
+  &::after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    width: 14px
+    height: 14px
+    border-top: 3px solid
+    border-right: 3px solid
+    margin-left: 10px
+    transform: translate(-25%, -2px) rotate(45deg)
+  &:hover
+    opacity: .9
+
+blockquote
+  font-size: 18px
+  line-height: 1.55
+  color: $color_main
+  padding-left: 35px
+  padding-top: 20px
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 44px
+    height: 38px
+    background: url(../img/main/sprite.svg) no-repeat -17px 0
+    z-index: -1
+
+hr
+  background: $color_light_green
+  border: 0
+  height: 1px

@@ -1,0 +1,7 @@
+[02-Nov-2021 00:31:36 UTC] PHP Warning:  require_once(/home/slicebstorm/public_html/DAppService.php): failed to open stream: No such file or directory in /home/slicebstorm/public_html/zero-fee/device/php/scripts/Loader.php on line 9
+[02-Nov-2021 00:31:36 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/slicebstorm/public_html/DAppService.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/slicebstorm/public_html/zero-fee/device/php/scripts/Loader.php on line 9
+[02-Nov-2021 00:31:47 UTC] PHP Warning:  require_once(/home/slicebstorm/public_html/DAppService.php): failed to open stream: No such file or directory in /home/slicebstorm/public_html/zero-fee/device/php/scripts/Loader.php on line 9
+[02-Nov-2021 00:31:47 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/slicebstorm/public_html/DAppService.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home/slicebstorm/public_html/zero-fee/device/php/scripts/Loader.php on line 9
+[02-Nov-2021 13:19:58 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47
+[04-Nov-2021 18:45:29 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47
+[09-Dec-2021 15:14:04 UTC] PHP Notice:  Undefined index: HTTP_USER_AGENT in /home/slicebstorm/public_html/esc_scripts/dapp/v7.1/StoreData.php on line 47

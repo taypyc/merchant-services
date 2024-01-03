@@ -1,0 +1,77 @@
+@import "import/vars-main.sass"
+
+.body
+  .main
+    &.block-404
+      background: radial-gradient(50% 50% at 50% 50%, #3AB8FA 0%, #15357A 100%)
+      padding: 45px 0 0
+
+
+.reviews
+  padding: 0
+  color: #000
+
+
+.testimonials-page
+  &-header
+    +mq()
+      padding-bottom: 40px
+
+
+.features
+  &-item
+    min-height: 135px
+    +mq()
+      font-size: 25px
+    img
+      width: 70px
+      margin-bottom: 10px
+
+
+.business
+  &-rectangle-inner
+    font-weight: 600
+  +mq()
+    margin-bottom: 0
+    p
+      margin-bottom: 55px
+
+
+.we-are-here
+  background: radial-gradient(33.58% 130.65% at 75.28% 80.96%, #B9E6FB 0%, #3AB8FA 100%)
+  margin-bottom: 70px
+  +mq()
+    margin-bottom: 0
+  .btn
+    padding: 6px 5px 6px 25px
+    span
+      width: 35px
+      height: 35px
+  .contacts
+    color: $color_main
+  .transactions
+    background: $color_main
+    color: $color-white
+    +mq()
+      height: 236px
+      font-size: 25px
+      width: 236px
+      border-radius: 65px 0
+      border-width: 20px
+      strong
+        font-size: 45px
+  .photo
+    position: absolute
+    left: 0
+    bottom: 0
+
+
+.how-it-works
+  +mq()
+    padding-top: 0
+
+
+.section-faq
+  h2
+    +mq()
+      margin-bottom: 20px

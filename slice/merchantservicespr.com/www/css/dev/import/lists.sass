@@ -1,0 +1,151 @@
+.list-circle
+  line-height: 1.15
+  li
+    position: relative
+    padding-left: 33px
+    margin-bottom: 0.5em
+    +mq(1439)
+      margin-bottom: 10px
+      padding-left: 30px
+    +mq(1199)
+      padding-left: 26px
+    +mq(767)
+      padding-left: 23px
+    // +mq(413)
+    //   margin-bottom: 8px
+    +mq(374)
+      padding-left: 20px
+    &:last-child
+      margin-bottom: 0
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: calc(0.5em - 6px)
+      left: 0
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background-color: #ceddff
+      +mq(767)
+        width: 10px
+        height: 10px
+        top: calc(0.5em - 5px)
+
+.list-circle-lg
+  &.list-circle
+    font-size: 25px
+    +mq(1599)
+      font-size: 23px
+    +mq(1439)
+      font-size: 22px
+    +mq(1199)
+      font-size: 20px
+    +mq(991)
+      font-size: 18px
+    +mq(639)
+      font-size: 17px
+
+.list-checked
+  font-size: 14px
+  line-height: 1.15
+  +mq(991)
+    font-size: 13px
+  li
+    position: relative
+    padding-left: 38px
+    margin-bottom: 35px
+    +mq(991)
+      padding-left: 30px
+      margin-bottom: 27px
+    &::before, &::after
+      content: ''
+      display: block
+      position: absolute
+    &::before
+      top: 6px
+      left: 5px
+      width: 14px
+      height: 7px
+      border-left: 3px solid
+      border-bottom: 3px solid
+      border-color: #3edb88
+      transform: rotate(-45deg)
+      +mq(991)
+        width: 12px
+        height: 6px
+    &::after
+      top: -2px
+      left: 0
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      border: 2px solid #3edb88
+      +mq(991)
+        top: -1px
+        width: 21px
+        height: 21px
+  .list-checked-header
+    font-size: 1.3em
+    margin-bottom: 5px
+
+
+.list-checked-sm
+  &.list-checked
+    font-size: 16px
+    +mq(1365)
+      font-size: 15px
+    li
+      padding-left: 23px
+      margin-bottom: 7px
+      +mq(413)
+        padding-left: 20px
+      &::before
+        width: 14px
+        height: 7px
+        top: 4px
+        +mq(413)
+          top: 5px
+          width: 12px
+          height: 6px
+          
+.list-default
+  padding-left: 29px
+  list-style-type: disc
+  li
+    margin-bottom: 5px
+
+ul[class*=list-]
+  li:last-child
+    margin-bottom: 0
+
+.list-line
+  li
+    line-height: 1.15
+    position: relative
+    padding-left: 10px
+    margin-bottom: 10px
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 3px
+      background-color: #ccc
+      border-radius: 3px
+
+.list-line-xs
+  &.list-line
+    font-size: 14px
+
+.list-inline
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 20px
+    &:last-child
+      margin-right: 0

@@ -1,0 +1,39 @@
+SetEnvIf Request_URI ".*" SITE_ROOT=/es/plaid/
+SetEnvIf Request_URI ".*" ASSETS_GLOBAL=/assets-global/m01/
+SetEnvIf Request_URI ".*" DAPP_ROOT=/../esc_scripts/dapp-b2b/v2.1
+SetEnvIf Request_URI ".*" DAPP_FLOW=flow-04
+SetEnvIf Request_URI ".*" DAPP_MARKUP=markup-03
+SetEnvIf Request_URI ".*" "CAMPAIGN_NAME=PR Facebook LP Form"
+#SetEnvIf Request_URI ".*" FB_API=pr
+SetEnvIf Request_URI ".*" FB_API=ignore
+SetEnvIf Request_URI ".*" MOCKUP_DEBUG=false
+
+SetOutputFilter DEFLATE
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|svg|woff|woff2)$">
+Header set Cache-Control "max-age=691200, public, must-revalidate"
+</FilesMatch>
+
+RewriteEngine On
+RewriteBase /
+
+#https
+#RewriteCond %{HTTPS} off
+#RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+RewriteRule ^(.*)$ https://%1%{REQUEST_URI} [R=301,L]
+
+RewriteRule ^index\.(html|htm|php)$ %{ENV:SITE_ROOT} [R=301,L]
+
+#remove slash / on the end
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/$ /$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} /(quick-start)/([^/]+)?$
+RewriteRule .* %{ENV:SITE_ROOT}%1.php?%2 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ %{ENV:SITE_ROOT}$1.php [L,QSA]
